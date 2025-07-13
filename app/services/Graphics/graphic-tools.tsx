@@ -12,8 +12,8 @@ interface ToolCard {
 const webDevTools: ToolCard[] = [
   {
     name: "Adobe Photoshop",
-    description: "The React framework for production",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png",
+    description: "Professional image editing and design",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png", // Replace this with your direct image URL
     // category: "Framework",
   },
   {

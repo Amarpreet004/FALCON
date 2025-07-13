@@ -16,18 +16,15 @@ export default function Footer() {
     { name: 'Web Development', href: '/services/web-development' },
     { name: 'UI/UX Design', href: '/services/ui-ux-design' },
     { name: 'SEO Optimization', href: '/services/seo' },
- 
-    { name: 'Graphic Desgin', href: '/services/cloud' },
-    { name: 'Video Editing', href: '/services/consulting' },
+    { name: 'Graphic Design', href: '/services/Graphics' },
+    { name: 'Video Editing', href: '/services/videoediting' },
   ];
 
   const companyLinks: ServiceLink[] = [
-      { name: 'Home', href: '/blog' },
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-   
-    { name: 'Services', href: '/careers' },
-  
-    { name: 'Contact', href: '/Users/amarpreetsingh/Documents/Web-project-main copy 3/app/page.tsx' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const legalLinks: ServiceLink[] = [
@@ -79,7 +76,7 @@ export default function Footer() {
                 alt="Falcon Solutions" 
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-1xl font-bold tracking-wide text-white ">FALCON SOLUTIONS</span>
+              <span className="text-1xl font-bold tracking-wide text-white ">FALCON WEB SOLUTION</span>
             </div>
             <p className="text-gray-400">
               Delivering exceptional services to help your business grow in the digital world.

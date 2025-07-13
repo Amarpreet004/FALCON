@@ -78,8 +78,8 @@ export function ThreeDCardDemo() {
   }, [showSecondCard]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black px-10 py-20">
-      <div className="flex flex-col md:flex-row items-start gap-10">
+    <div className="min-h-screen px-10 py-20">
+      <div className="flex flex-col md:flex-row items-start gap-20">
         {/* Left side: 3D card */}
         <CardContainer className="inter-var" containerClassName="p-0">
           <CardBody className="rounded-xl border overflow-hidden shadow-xl bg-gray-50 dark:bg-black border-black/[0.1] dark:border-white/[0.2] w-96 h-[22rem]">
@@ -87,46 +87,12 @@ export function ThreeDCardDemo() {
               <img
                 src={
                   showSecondCard
-                    ? "/Screenshot 2025-07-07 at 1.04.23\u202FAM.png"
-                    : "/IMG_6268.jpeg"
+                    ? "/kapil.jpeg"
+                    : "/preet.JPG"
                 }
                 alt="card image"
                 className="w-full h-full object-cover"
               />
-              {/* Overlay content */}
-              <div className="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-t from-black/60 via-black/0 to-transparent text-white">
-                <div>
-                  <h2 className="text-2xl font-bold">
-                    {showSecondCard ? "Kapil Kumar Gupta " : "Amarpreet Singh"}
-                  </h2>
-                  <p className="text-sm text-neutral-200">
-                    {showSecondCard ? "Frontend Developer || Graphic Designer & UI/UX" : " Full Stack Developer || Graphic Designer & Video Editor "}
-                  </p>
-                </div>
-                <div className="flex justify-between items-center mt-4">
-                  <a
-                    href={
-                      showSecondCard
-                        ? "https://www.linkedin.com/in/amarpreet-singh-9022a62a6/"
-                        : "https://www.linkedin.com/in/amarpreet-singh-9022a62a6/"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl text-xs font-normal bg-white/20 hover:bg-white/30 transition"
-                  >
-                    {showSecondCard ? "LinkedIn →" : "LinkedIn →"}
-                  </a>
-                  <button
-                    className="px-4 py-2 rounded-xl bg-black text-white text-xs font-bold hover:bg-white hover:text-black transition"
-                    onClick={() => {
-                      setPopupProfile(showSecondCard ? profile2 : profile1);
-                      setPopupOpen(true);
-                    }}
-                  >
-                    More
-                  </button>
-                </div>
-              </div>
             </CardItem>
           </CardBody>
         </CardContainer>
@@ -137,16 +103,20 @@ export function ThreeDCardDemo() {
               <h1 className="text-4xl font-bold">Kapil Kumar Gupta</h1>
               <h4 className="text-1xl font-bold">Co Founder</h4>
               <p className="mt-4 max-w-xl">
-                Alex is a Product Designer &amp; UI/UX Specialist. Explore his portfolio or get in touch to collaborate on your next project!
-              </p>
+               As the Co-Founder of Falcon Web Solution, Kapil brings a powerful blend of strategic thinking and creative vision to the team. His expertise lies in project planning, client communication, and delivering seamless user experiences across web and digital platforms.
+Kapil plays a key role in ensuring that each project not only meets the technical and visual benchmarks but also aligns with the client’s brand goals. From overseeing custom website builds to managing graphic and video projects, Kapil ensures that Falcon Web Solution consistently delivers excellence across every touchpoint.
+Together with the founding team, Kapil is committed to scaling Falcon into a leading digital solutions provider, where innovation, design, and performance go hand in hand.          </p>
             </>
           ) : (
             <>
               <h1 className="text-4xl font-bold">Amarpreet Singh</h1>
               <h4 className="text-1xl font-bold">Founder</h4>
-              <p className="mt-4 max-w-xl">
-                Amarpreet Singh is the Founder. Discover our features and sign up to get started!
-              </p>
+                <p className="mt-4 max-w-xl">
+                  As the founder of Falcon Web Solution, my vision was clear from day one—to create a one-stop digital powerhouse that delivers modern, meaningful, and measurable results. What started as a passion for web design and visual creativity has now grown into a full-fledged digital solutions startup.
+At Falcon Web Solution, we specialize in website design & development, graphic design, video editing, and digital courses. We've already successfully delivered over 5 modern websites, each tailored to meet our clients’ unique needs. But we don’t just build websites—we take full ownership of our clients' online presence, from social media management to ongoing web maintenance and digital branding.
+Our goal is simple: Empower businesses to grow through design, technology, and strategy.
+With every project, we aim to blend creativity with functionality, offering not just a service—but a solution.
+                </p>
             </>
           )}
         </div>

@@ -332,7 +332,7 @@ export const NavbarLogo = () => {
         width={50}
         height={50}
       />
-      <span className="font-bold text-black dark:text-white font-sans">FALCON SOLUTIONS</span>
+      <span className="font-bold text-black dark:text-white font-sans">FALCON WEB SOLUTION</span>
     </a>
   );
 };

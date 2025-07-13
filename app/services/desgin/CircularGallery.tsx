@@ -661,10 +661,24 @@ export default function CircularGallery({
 }: CircularGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Mobile breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Use 0 bend for mobile, original bend for desktop
+  const responsiveBend = isMobile ? 0 : bend;
 
   useEffect(() => {
     if (!containerRef.current || !isClient) return;
@@ -674,7 +688,7 @@ export default function CircularGallery({
     try {
       app = new App(containerRef.current, {
         items,
-        bend,
+        bend: responsiveBend, // Use responsive bend value
         textColor,
         borderRadius,
         font,
@@ -692,7 +706,7 @@ export default function CircularGallery({
         app.destroy();
       }
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onImageClick, isClient]);
+  }, [items, responsiveBend, textColor, borderRadius, font, scrollSpeed, scrollEase, onImageClick, isClient]);
 
   if (!isClient) {
     return (

@@ -31,12 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GlobalCoolMode options={{ particleCount: 10, speedHorz: 8, speedUp: 28 }}>
+        {/* <GlobalCoolMode options={{ particleCount: 10, speedHorz: 8, speedUp: 28 }}> */}
           <ThemeProvider />
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </GlobalCoolMode>
+        {/* </GlobalCoolMode> */}
       </body>
     </html>
   );

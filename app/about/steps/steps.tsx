@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const HowItWorksSection = () => {
   const steps = [
@@ -39,7 +39,10 @@ const HowItWorksSection = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
+    hidden: {
+      opacity: 0
+    },
     visible: {
       opacity: 1,
       transition: {
@@ -48,7 +51,11 @@ const HowItWorksSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
+    hidden: {
+      y: 20,
+      opacity: 0
+    },
     visible: {
       y: 0,
       opacity: 1,

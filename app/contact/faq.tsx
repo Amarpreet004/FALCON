@@ -19,10 +19,7 @@ Video Editing,
 Digital Marketing,
 Professional Training Courses in Graphic Design, Editing, and Development`
   },
-  {
-    question: "How to claim your 25% discount offer?",
-    answer: "To claim your 25% discount, simply mention this offer when you contact us for your project consultation. The discount applies to new clients for projects starting within 30 days of initial contact. Contact us at falconsolutions492@gmail.com with the subject 'First Project 25% Off' to get started."
-  },
+  
   {
     question: " What technologies do you use for web development?",
     answer: "We use modern, scalable technologies like React.js, Next.js, Node.js, Tailwind CSS, Bootstrap, and more. We always pick the right stack based on your project’s needs."

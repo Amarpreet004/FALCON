@@ -2,30 +2,29 @@
 
 import React from "react";
 import { MessageCircle, MessageSquare, MapPin, Phone } from "lucide-react";
-import { GridBackgroundDemo } from "../background/background";
 import { CoolModeDemo } from "./button";
 import { FAQ } from "./faq";
 
 export default function ContactPage() {
   return (
-    <div className="relative min-h-screen">
-      {/* Grid Background */}
-      <div className="absolute inset-0 z-0">
-        <GridBackgroundDemo />
-      </div>
-      
+    <div className="min-h-screen">
       {/* Content */}
-      <div className="relative z-10 py-16 px-4">
+      <div className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-8">
-            <div className="p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg">
-              <div className="flex space-x-1">
-                <div className="w-2 h-8 bg-gray-800 dark:bg-white rounded-full"></div>
-                <div className="w-2 h-8 bg-gray-800 dark:bg-white rounded-full"></div>
-                <div className="w-2 h-8 bg-gray-800 dark:bg-white rounded-full"></div>
-              </div>
+            <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/Falcon.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">

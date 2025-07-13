@@ -102,8 +102,19 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  // Add missing handler functions
+  const handleExploreClick = () => {
+    // Navigate to the Bookcall page
+    window.location.href = "/contact/Bookcall";
+  };
+
+  const handleContactClick = () => {
+    // Example: navigate to contact support page
+    window.location.href = "/contact-support";
+  };
+
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4  w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
       Falcon Solutions <br /> Design. Develop. Create. Soar.
       </h1>
@@ -113,6 +124,7 @@ we craft solutions that transform visions into reality.
 From stunning websites to bold branding, from powerful video edits to sleek user experiences —
 we’re the creative engine behind digital success.
       </p>
+      
     </div>
   );
 };

@@ -50,8 +50,6 @@ const grid = [
   },
   {
     title: "Elevate 2024",
-    description:
-      "Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.",
     image: "/elevate_logo.png",
     width: "130px",
     height: "100px"
@@ -71,8 +69,8 @@ const grid = [
   {
     title: "Bhart-Tech Hackathon 2.0",
     image: "/2.0logo.eb68755e126d8cfbb6ab.png",
-    width: "110px",
-    height: "48px"
+    width: "210px",
+    height: "200px"
   },
   {
     title: "Amar Travel Agency",

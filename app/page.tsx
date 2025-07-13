@@ -4,13 +4,19 @@ import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll"
 import React from "react";
 import { Available } from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
+import { ThreeDMarqueeDemo } from "./home/Hero/hero-in-mobile";
 
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="w-full">
+      {/* Hero Section - Desktop */}
+      <section className="w-full hidden md:block">
         <HomePage/>
+      </section>
+      
+      {/* Hero Section - Mobile */}
+      <section className="w-full block md:hidden">
+        <ThreeDMarqueeDemo/>
       </section>
       
       {/* Services Section with proper spacing */}

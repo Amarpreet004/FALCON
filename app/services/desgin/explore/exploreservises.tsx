@@ -40,7 +40,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Video Editing Courses",
     backgroundImage: "url('https://www.cdmi.in/courses@2x/5_Video_Editing.webp')",
-    route: "/services/videoediting",
+    route: "/services/desgin/explorecourese",
   },
   {
     name: "Full Stack Courses",

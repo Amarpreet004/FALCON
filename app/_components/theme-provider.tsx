@@ -4,16 +4,10 @@ import { useEffect } from "react";
 
 export default function ThemeProvider() {
   useEffect(() => {
-    // Check for dark mode preference
-    if (
-      localStorage.theme === "dark" ||
-      (!localStorage.theme &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    // Always force dark mode
+    document.documentElement.classList.add("dark");
+    // Set localStorage to dark to maintain consistency
+    localStorage.theme = "dark";
   }, []);
 
   return null;

@@ -63,6 +63,15 @@ module.exports = {
 				'3': 'hsl(var(--chart-3))',
 				'4': 'hsl(var(--chart-4))',
 				'5': 'hsl(var(--chart-5))'
+			},
+			// Custom brand colors
+			brand: {
+				maroon: '#660033',
+				orange: '#FF5C00',
+				'maroon-light': '#CC3366',
+				'maroon-dark': '#330019',
+				'orange-light': '#FF8A33',
+				'orange-dark': '#CC4700'
 			}
 		},
 		fontFamily: {

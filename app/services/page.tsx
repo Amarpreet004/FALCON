@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { SpotlightNewDemo } from './desgin/SpotlightNewDemo';
 import { ParallaxScrollDemo } from './desgin/ParallaxScrollDemo';
 import GradientTextDemo  from './desgin/GradientText';
-import  {AuroraBackgroundDemo}  from './desgin/videoexport';
 import { AnimatedTestimonialsDemo } from './desgin/video_editing/AnimatedTestimonialsDemo';
 import WebDevToolsCards from './desgin/services/servic';
 export default function ServicesPage() {

@@ -327,12 +327,12 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-sans text-black"
     >
       <img
-        src="/FALCON.png"
+        src="/FALCONLOGO.png"
         alt="logo"
-        width={50}
+        width={100}
         height={50}
       />
-      <span className="font-bold text-black dark:text-white font-sans">FALCON WEB SOLUTION</span>
+
     </a>
   );
 };

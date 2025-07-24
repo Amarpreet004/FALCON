@@ -42,9 +42,9 @@ export default function Home() {
         <Crousel />
       </section>
       {/* Our Services Section - Mobile */}
-      {/* <section className="w-full block md:hidden">
+      <section className="w-full block md:hidden">
         <ServicesFAQ />
-      </section> */}
+      </section>
       
       {/* Services Section with proper spacing */}
       {/* <section className="w-full bg-white dark:bg-black pt-20 mt-20">

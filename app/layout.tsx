@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FALCON INDUSTRY - Professional Services",
+  title: "FALCON Web Solution ",
   description: "FALCON INDUSTRY provides top-quality professional services including web development, design, and digital solutions.",
 };
 

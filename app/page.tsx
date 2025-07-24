@@ -7,6 +7,7 @@ import { Available } from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
 
 import DEV from "./home/Hero/DEV";
+import { InfiniteMovingCardsDemo as Crousel } from "./home/Hero/crousel/crousel";
 import WhoAreYou from "./home/whoareyou/whoareyou";
 import { WorldMapDemo } from "./home/worldservice/mappage";
 
@@ -14,15 +15,16 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section - Desktop */}
-      {/* <section className="w-full hidden md:block">
-        <HomePage/> */}
-      {/* </section> */}
       <section className="w-full hidden md:block mt-28">
         <DEV />
       </section>
       {/* WhoAreYou Section - Desktop */}
       <section className="w-full hidden md:block">
         <WhoAreYou />
+      </section>
+      {/* Crousel Section - Desktop */}
+      <section className="w-full hidden md:block">
+        <Crousel />
       </section>
       {/* MapPage Section - Desktop */}
       {/* <section className="w-full hidden md:block">
@@ -32,6 +34,10 @@ export default function Home() {
       {/* Hero Section - Mobile */}
       <section className="w-full block md:hidden mt-28">
         <DEV />
+      </section>
+      {/* Crousel Section - Mobile */}
+      <section className="w-full block md:hidden">
+        <Crousel />
       </section>
       
       {/* Services Section with proper spacing */}

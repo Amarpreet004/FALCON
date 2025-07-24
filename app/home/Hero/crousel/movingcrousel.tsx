@@ -73,21 +73,21 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden bg-transparent [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden bg-transparent mx-auto [mask-image:linear-gradient(to_right,transparent,white_8%,white_92%,transparent)]",
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-1 mx-auto",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-transparent px-2 py-2 md:w-[450px] dark:border-zinc-700 transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-2 border-[#5C0632] bg-white px-2 py-2 md:w-[450px] transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             key={item.name}
             style={{ cursor: 'pointer' }}
           >
@@ -95,7 +95,7 @@ export const InfiniteMovingCards = ({
               src={item.quote}
               alt={item.name}
               className="w-full h-[220px] object-cover rounded-xl transition-transform duration-300"
-              style={{ background: '#eee' }}
+              style={{ background: '#fff' }}
             />
           </li>
         ))}

@@ -82,14 +82,13 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-1 mx-auto",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]",
+          pauseOnHover && "md:hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-2 border-[#5C0632] bg-white px-2 py-2 md:w-[450px] transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-2 border-[#5C0632] bg-white px-2 py-2 md:w-[450px] transition-transform duration-300 md:hover:scale-105 md:hover:shadow-2xl md:cursor-pointer cursor-default pointer-events-none md:pointer-events-auto"
             key={item.name}
-            style={{ cursor: 'pointer' }}
           >
             <img
               src={item.quote}

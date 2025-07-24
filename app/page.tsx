@@ -5,11 +5,13 @@ import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll";
 import React from "react";
 import { Available } from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
-
+import {FAQ} from "../app/contact/faq";
 import DEV from "./home/Hero/DEV";
 import { InfiniteMovingCardsDemo as Crousel } from "./home/Hero/crousel/crousel";
 import WhoAreYou from "./home/whoareyou/whoareyou";
 import { WorldMapDemo } from "./home/worldservice/mappage";
+
+import ServicesFAQ from "./home/services/ourservices";
 
 export default function Home() {
   return (
@@ -26,10 +28,10 @@ export default function Home() {
       <section className="w-full hidden md:block">
         <Crousel />
       </section>
-      {/* MapPage Section - Desktop */}
-      {/* <section className="w-full hidden md:block">
-        <WorldMapDemo />
-      </section> */}
+      {/* Our Services Section - Desktop */}
+      <section className="w-full hidden md:block">
+        <ServicesFAQ />
+      </section>
       
       {/* Hero Section - Mobile */}
       <section className="w-full block md:hidden mt-28">
@@ -39,12 +41,15 @@ export default function Home() {
       <section className="w-full block md:hidden">
         <Crousel />
       </section>
+      {/* Our Services Section - Mobile */}
+      {/* <section className="w-full block md:hidden">
+        <ServicesFAQ />
+      </section> */}
       
       {/* Services Section with proper spacing */}
-      <section className="w-full bg-white dark:bg-black pt-20 mt-20">
+      {/* <section className="w-full bg-white dark:bg-black pt-20 mt-20">
         <FeaturesSectionDemo/>
-      </section>
-      
+      </section> */}
       {/* Other Sections with spacing */}
       <div className="mt-20">
         <StickyScrollRevealDemo/>
@@ -55,6 +60,7 @@ export default function Home() {
       <div className="mt-20">
         <InfiniteMovingCardsDemo/>
       </div>
+      <FAQ />
     </div>
   );
 }

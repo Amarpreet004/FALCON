@@ -5,6 +5,7 @@ import { NavbarDemo as Navbar } from "./_components/newNav/Navnew";
 import { MobileNavigation } from "./_components/mobilenav/mobailenav";
 import Footer from "./_components/footer";
 import ThemeProvider from "./_components/theme-provider";
+import { Analytics } from '@vercel/analytics/next';
 
 
 const geistSans = Geist({
@@ -31,7 +32,9 @@ export default function RootLayout({
     <html lang="en" className="light" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      
       >
+          <Analytics />
         {/* <GlobalCoolMode options={{ particleCount: 10, speedHorz: 8, speedUp: 28 }}> */}
           <ThemeProvider />
           

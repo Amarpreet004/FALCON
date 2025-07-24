@@ -65,20 +65,19 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-[#5C0632] text-white border-t-4 border-[#5C0632] shadow-inner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/FALCON.png" 
-                alt="Falcon Solutions" 
-                className="h-12 w-auto object-contain"
+                src="/falkan logo new 1.png" 
+                alt="Falcon Solutions New Logo" 
+                className="h-14 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
               />
-              <span className="text-1xl font-bold tracking-wide text-white ">FALCON WEB SOLUTION</span>
             </div>
-            <p className="text-gray-400">
+            <p className="text-white">
               Delivering exceptional services to help your business grow in the digital world.
             </p>
             <div className="flex space-x-4">
@@ -86,7 +85,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  className="text-white hover:text-white transition-colors duration-300"
                   aria-label={item.name}
                 >
                   {item.icon}
@@ -97,13 +96,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.href}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-white hover:text-white transition-colors duration-300"
                   >
                     {service.name}
                   </Link>
@@ -114,13 +113,13 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-white hover:text-white transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -131,8 +130,8 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <address className="not-italic text-gray-400 space-y-2">
+            <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+            <address className="not-italic text-white space-y-2">
               <p>U-Zone</p>
               <p>Punjab</p>
               <p>
@@ -146,7 +145,6 @@ export default function Footer() {
                   className="hover:text-white transition-colors duration-300"
                 >
                   falconsolutions492@gmail.com
-
                 </Link>
               </p>
             </address>
@@ -161,13 +159,13 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+                  className="text-white hover:text-white text-sm transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-white text-sm">
               &copy; {new Date().getFullYear()} Falcon. All rights reserved.
             </p>
           </div>

@@ -189,7 +189,7 @@ export default function BookCall() {
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
           Let's Build Something Amazing Together
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300">
@@ -201,8 +201,8 @@ export default function BookCall() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.01]">
           {/* Personal Information */}
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              <User className="w-6 h-6 mr-3 text-blue-600 hover:scale-110 transition-transform duration-300" />
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center transition-colors duration-300">
+              <User className="w-6 h-6 mr-3 text-[#5C0632] transition-transform duration-300" />
               Personal Information
             </h3>
             
@@ -287,7 +287,7 @@ export default function BookCall() {
                 name="company"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:shadow-md hover:border-blue-300 transform hover:-translate-y-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:border-blue-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5C0632] focus:border-transparent transition-all duration-200 hover:shadow-md hover:border-[#5C0632] transform hover:-translate-y-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:border-[#5C0632]"
                 placeholder="Your Company"
               />
             </div>
@@ -295,8 +295,8 @@ export default function BookCall() {
 
           {/* Services Selection */}
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              <Briefcase className="w-6 h-6 mr-3 text-blue-600 hover:scale-110 transition-transform duration-300" />
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center transition-colors duration-300">
+              <Briefcase className="w-6 h-6 mr-3 text-[#5C0632] transition-transform duration-300" />
               Services Needed *
             </h3>
             
@@ -306,8 +306,8 @@ export default function BookCall() {
                   key={service.id}
                   className={`group relative border rounded-lg p-4 cursor-pointer transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 ${
                     formData.services.includes(service.id)
-                      ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md"
-                      : "border-gray-300 dark:border-gray-600 hover:border-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                      ? "border-[#5C0632] bg-[#5C0632]/10 dark:bg-[#5C0632]/20 shadow-md"
+                      : "border-gray-300 dark:border-gray-600 hover:border-[#5C0632] hover:bg-[#5C0632]/5 dark:hover:bg-[#5C0632]/10"
                   }`}
                   onClick={() => handleServiceChange(service.id)}
                 >
@@ -316,10 +316,10 @@ export default function BookCall() {
                       type="checkbox"
                       checked={formData.services.includes(service.id)}
                       onChange={() => handleServiceChange(service.id)}
-                      className="mt-1 mr-3 text-blue-600 focus:ring-blue-500 hover:scale-110 transition-transform duration-200"
+                    className="mt-1 mr-3 text-[#5C0632] focus:ring-[#5C0632] hover:scale-110 transition-transform duration-200"
                     />
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">{service.label}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-[#5C0632] dark:group-hover:text-[#5C0632] transition-colors duration-200">{service.label}</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-200">{service.description}</p>
                     </div>
                   </div>
@@ -331,8 +331,8 @@ export default function BookCall() {
 
           {/* Message */}
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              <MessageSquare className="w-6 h-6 mr-3 text-blue-600 hover:scale-110 transition-transform duration-300" />
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center transition-colors duration-300">
+              <MessageSquare className="w-6 h-6 mr-3 text-[#5C0632] transition-transform duration-300" />
               Project Description
             </h3>
             
@@ -341,7 +341,7 @@ export default function BookCall() {
               value={formData.message}
               onChange={handleInputChange}
               rows={6}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:shadow-md hover:border-blue-300 transform hover:-translate-y-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:border-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5C0632] focus:border-transparent transition-all duration-200 hover:shadow-md hover:border-[#5C0632] transform hover:-translate-y-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:border-[#5C0632]"
               placeholder="Tell us more about your project, goals, and any specific requirements..."
             />
           </div>
@@ -357,7 +357,7 @@ export default function BookCall() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-blue-400 disabled:to-blue-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 ${
+            className={`inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#5C0632] to-[#5C0632] hover:from-[#4a0527] hover:to-[#4a0527] disabled:from-[#a97c9a] disabled:to-[#a97c9a] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 ${
                 isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
               }`}
             >
@@ -368,7 +368,7 @@ export default function BookCall() {
                 </>
               ) : (
                 <>
-                  <Send className="w-5 h-5 mr-3 hover:animate-pulse" />
+                  <Send className="w-5 h-5 mr-3 text-[#5C0632] hover:animate-pulse" />
                   Send My Inquiry
                 </>
               )}

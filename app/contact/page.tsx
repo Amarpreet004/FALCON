@@ -2,14 +2,14 @@
 
 import React from "react";
 import { MessageCircle, MessageSquare, MapPin, Phone } from "lucide-react";
-import { CoolModeDemo } from "./button";
+
 import { FAQ } from "./faq";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Content */}
-      <div className="py-16 px-4">
+      <div className="py-16 px-4 mt-28">
         <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">

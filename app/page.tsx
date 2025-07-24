@@ -1,22 +1,37 @@
+
 import HomePage from "./home/page";
 import FeaturesSectionDemo from "./home/Card";
-import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll"
+import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll";
 import React from "react";
 import { Available } from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
-import { ThreeDMarqueeDemo } from "./home/Hero/hero-in-mobile";
+
+import DEV from "./home/Hero/DEV";
+import WhoAreYou from "./home/whoareyou/whoareyou";
+import { WorldMapDemo } from "./home/worldservice/mappage";
 
 export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section - Desktop */}
-      <section className="w-full hidden md:block">
-        <HomePage/>
+      {/* <section className="w-full hidden md:block">
+        <HomePage/> */}
+      {/* </section> */}
+      <section className="w-full hidden md:block mt-28">
+        <DEV />
       </section>
+      {/* WhoAreYou Section - Desktop */}
+      <section className="w-full hidden md:block">
+        <WhoAreYou />
+      </section>
+      {/* MapPage Section - Desktop */}
+      {/* <section className="w-full hidden md:block">
+        <WorldMapDemo />
+      </section> */}
       
       {/* Hero Section - Mobile */}
-      <section className="w-full block md:hidden">
-        <ThreeDMarqueeDemo/>
+      <section className="w-full block md:hidden mt-28">
+        <DEV />
       </section>
       
       {/* Services Section with proper spacing */}

@@ -1,6 +1,6 @@
 "use client";
 import { Suspense } from "react";
-import AboutPage from "./wavebg";
+import { WorldMapDemo } from "../home/worldservice/mappage";
 import ProfileCardI from "./profilecards/ProfileCardI";
 import GallerySection from "./courese/courses";
 import { InfiniteMovingCardsDemo } from "../home/review/review";
@@ -17,9 +17,11 @@ function LoadingFallback() {
 
 export default function About() {
   return (
-    <div>
-      <Suspense fallback={<LoadingFallback />}>
-        <AboutPage/>
+    <main>
+      <Suspense fallback={<LoadingFallback />} >
+        <div className="mt-25">
+          <WorldMapDemo/>
+        </div>
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <AboutFalcon />
@@ -36,6 +38,6 @@ export default function About() {
       <Suspense fallback={<LoadingFallback />}>
         <InfiniteMovingCardsDemo/>
       </Suspense>
-    </div>
+    </main>
   );
 }

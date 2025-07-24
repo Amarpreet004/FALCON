@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavbarDemo as Navbar } from "./_components/navBar";
+import { NavbarDemo as Navbar } from "./_components/newNav/Navnew";
+import { MobileNavigation } from "./_components/mobilenav/mobailenav";
 import Footer from "./_components/footer";
 import ThemeProvider from "./_components/theme-provider";
-import { GlobalCoolMode } from "./contact/global-cool-mode";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,13 @@ export default function RootLayout({
       >
         {/* <GlobalCoolMode options={{ particleCount: 10, speedHorz: 8, speedUp: 28 }}> */}
           <ThemeProvider />
+          
+          {/* Top Navbar - Responsive (full on desktop, simplified on mobile) */}
           <Navbar />
+          
+          {/* Mobile Bottom Navigation - Only visible on mobile */}
+          <MobileNavigation />
+          
           <main>{children}</main>
           <Footer />
         {/* </GlobalCoolMode> */}

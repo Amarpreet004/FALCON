@@ -9,7 +9,9 @@ import WebDevToolsCards from './desgin/services/servic';
 export default function ServicesPage() {
   return (
     <div className="w-full">
-     <SpotlightNewDemo/>
+     <div className="mt-28">
+       <SpotlightNewDemo/>
+     </div>
       <CircularGalleryWrapper/>
 
  

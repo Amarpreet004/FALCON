@@ -16,7 +16,7 @@ const projects = [
   {
     name: "Elevate 2024",
     logo: "/elevate_logo.png",
-    url: "https://www.theuniques.in/", // Replace with actual URL
+    url: "https://elevate.theuniques.in/#ideajam", // Replace with actual URL
   },
   {
     name: "Godigitify",
@@ -31,17 +31,17 @@ const projects = [
   {
     name: "Bhart-Tech Hackathon 2.0",
     logo: "/2.0logo.eb68755e126d8cfbb6ab.png",
-    url: "https://www.theuniques.in/", // Replace with actual URL
+    url: "https://bharat-tech-xperience.theuniques.in", // Replace with actual URL
   },
   {
     name: "Amar Travel Agency",
     logo: "/gvuvg.png",
-    url: "https://www.theuniques.in/", // Replace with actual URL
+    url: "https://amarpreet004.github.io/project-web/home.html", // Replace with actual URL
   },
   {
     name: "TechLearn Academy",
     logo: "/Logo-2.png",
-    url: "https://www.theuniques.in/", // Replace with actual URL
+    url: "https://www.techlearns.in", // Replace with actual URL
   },
 ];
 

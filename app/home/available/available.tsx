@@ -71,14 +71,13 @@ export default function ProjectsShowcase() {
               onClick={() => setSelected(idx)}
               className={`w-full flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none border-2 border-[#5C0632] text-lg font-semibold tracking-wide ${
                 selected === idx
-                  ? "shadow-lg text-[#5C0632] bg-white/80"
+                  ? "text-[#5C0632] bg-white/80"
                   : "hover:bg-[#5C0632]/40 opacity-100 text-[#5C0632]"
               } h-16 glass-btn`}
               style={{
                 minHeight: 64,
                 minWidth: 320,
                 maxWidth: 600,
-                boxShadow: selected === idx ? '0 8px 32px 0 rgba(92,6,50,0.25)' : '0 4px 24px 0 rgba(92,6,50,0.10)',
                 WebkitBackdropFilter: 'blur(18px)',
                 backdropFilter: 'blur(18px)',
                 border: '2px solid #5C0632',

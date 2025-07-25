@@ -1,172 +1,127 @@
-import React from "react";
-import { useId } from "react";
+"use client";
 
-export function Available() {
-  return (
-    <div className="py-20 lg:py-40">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white text-center mb-16">
-       Our Clients
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-4 max-w-7xl mx-auto">
-        {grid.map((feature) => (
-          <div
-            key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden transition-transform duration-300 group hover:scale-105 hover:shadow-2xl hover:z-10 hover:shadow-black/40 dark:hover:shadow-white/40 flex flex-col items-center justify-center"
-          >
-            <Grid size={20} />
-            <div className="relative z-20 mb-4 flex justify-center items-center h-20">
-              <img
-                src={feature.image}
-                alt={feature.title}
-                className="object-contain"
-                style={{
-                  width: feature.width || '128px',
-                  height: feature.height || '64px'
-                }}
-              />
-            </div>
-            <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20 text-center">
-              {feature.title}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+import React, { useState } from "react";
 
-const grid = [
+const projects = [
   {
-    title: "The Uniques Community",
-    image: "/theuniquesCommunity-CaNp0pLp.png",
-    width: "140px",
-    height: "60px"
+    name: "The Uniques Community",
+    logo: "/theuniquesCommunity-CaNp0pLp.png",
+    url: "https://www.theuniques.in/",
   },
   {
-    title: "Global Future Summit",
-    image: "/glob-Dzyn9PLW.png",
-    width: "150px",
-    height: "140px"
+    name: "Global Future Summit",
+    logo: "/glob-Dzyn9PLW.png",
+    url: "https://global-future-summit.theuniques.in",
   },
   {
-    title: "Elevate 2024",
-    image: "/elevate_logo.png",
-    width: "130px",
-    height: "100px"
+    name: "Elevate 2024",
+    logo: "/elevate_logo.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
   {
-    title: "Godigitify",
-    image: "/Godigitify.png",
-    width: "135px",
-    height: "100px"
+    name: "Godigitify",
+    logo: "/Godigitify.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
   {
-    title: "Click Masters",
-    image: "/click masters logo.png",
-    width: "125px",
-    height: "52px"
+    name: "Click Masters",
+    logo: "/click masters logo.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
   {
-    title: "Bhart-Tech Hackathon 2.0",
-    image: "/2.0logo.eb68755e126d8cfbb6ab.png",
-    width: "210px",
-    height: "200px"
+    name: "Bhart-Tech Hackathon 2.0",
+    logo: "/2.0logo.eb68755e126d8cfbb6ab.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
   {
-    title: "Amar Travel Agency",
-    image: "/gvuvg.png",
-    width: "115px",
-    height: "50px"
+    name: "Amar Travel Agency",
+    logo: "/gvuvg.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
   {
-    title: "TechLearn Academy",
-   image: "/Logo-2.png",
-    width: "128px",
-    height: "56px"
+    name: "TechLearn Academy",
+    logo: "/Logo-2.png",
+    url: "https://www.theuniques.in/", // Replace with actual URL
   },
 ];
 
-export const Grid = ({
-  pattern,
-  size,
-}: {
-  pattern?: number[][];
-  size?: number;
-}) => {
-  // Generate a unique set of coordinates to avoid duplicate keys
-  const generateUniqueCoordinates = () => {
-    const usedCoords = new Set();
-    const result = [];
-    
-    for (let i = 0; i < 5; i++) {
-      let x, y, coordKey;
-      do {
-        x = Math.floor(Math.random() * 4) + 7;
-        y = Math.floor(Math.random() * 6) + 1;
-        coordKey = `${x}-${y}`;
-      } while (usedCoords.has(coordKey));
-      
-      usedCoords.add(coordKey);
-      result.push([x, y]);
-    }
-    
-    return result;
-  };
-  
-  const p = pattern ?? generateUniqueCoordinates();
+export default function ProjectsShowcase() {
+  const [selected, setSelected] = useState(0);
   return (
-    <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-      <div className="absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
-        <GridPattern
-          width={size ?? 20}
-          height={size ?? 20}
-          x="-12"
-          y="4"
-          squares={p}
-          className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
-        />
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white py-12 px-2">
+      <h2 className="text-4xl md:text-6xl font-bold text-[#5C0632] text-center mb-10 tracking-wide">OUR PROJECTS</h2>
+      <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl items-start justify-center">
+        {/* Left: Project names as glassmorphism buttons, 4 visible, scrollable */}
+        <div
+          className="flex flex-col gap-6 flex-1 max-w-sm w-80% items-end overflow-y-auto hide-scrollbar"
+          style={{ maxHeight: 6 * 72 + 18 }}
+        > {/* 4 buttons, 72px each incl. gap */}
+<style jsx>{`
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+`}</style>
+          {projects.map((project, idx) => (
+            <button
+              key={project.name}
+              onClick={() => setSelected(idx)}
+              className={`w-full flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none border-2 border-[#5C0632] text-lg font-semibold tracking-wide ${
+                selected === idx
+                  ? "shadow-lg text-[#5C0632] bg-white/80"
+                  : "hover:bg-[#5C0632]/40 opacity-100 text-[#5C0632]"
+              } h-16 glass-btn`}
+              style={{
+                minHeight: 64,
+                minWidth: 320,
+                maxWidth: 600,
+                boxShadow: selected === idx ? '0 8px 32px 0 rgba(92,6,50,0.25)' : '0 4px 24px 0 rgba(92,6,50,0.10)',
+                WebkitBackdropFilter: 'blur(18px)',
+                backdropFilter: 'blur(18px)',
+                border: '2px solid #5C0632',
+                background: selected === idx
+                  ? 'rgba(255,255,255,0.85)'
+                  : 'rgba(92,6,50,0.13)',
+                color: '#5C0632',
+                marginBottom: 0,
+                position: 'relative',
+                overflow: 'hidden',
+              }}
+            >
+              {/* Glass shine overlay */}
+              <span style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background: 'linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 100%)',
+                pointerEvents: 'none',
+                borderRadius: '9999px',
+                zIndex: 1,
+              }} />
+              <span style={{ position: 'relative', zIndex: 2 }}>{project.name}</span>
+            </button>
+          ))}
+        </div>
+        {/* Right: Website preview */}
+        <div className="flex-1 flex items-center justify-center w-full">
+          <div className="w-full max-w-3xl aspect-video rounded-[26px] border-8 border-[#5C0632] overflow-hidden shadow-2xl bg-white">
+            <iframe
+              key={projects[selected].url}
+              src={projects[selected].url}
+              title={projects[selected].name}
+              className="w-full h-full min-h-[600px]"
+              style={{ border: "none" }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
-
-export function GridPattern({ width, height, x, y, squares, ...props }: any) {
-  const patternId = useId();
-
-  return (
-    <svg aria-hidden="true" {...props}>
-      <defs>
-        <pattern
-          id={patternId}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
-        </pattern>
-      </defs>
-      <rect
-        width="100%"
-        height="100%"
-        strokeWidth={0}
-        fill={`url(#${patternId})`}
-      />
-      {squares && (
-        <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([x, y]: any, index: number) => (
-            <rect
-              strokeWidth="0"
-              key={`${x}-${y}-${index}`}
-              width={width + 1}
-              height={height + 1}
-              x={x * width}
-              y={y * height}
-            />
-          ))}
-        </svg>
-      )}
-    </svg>
   );
 }

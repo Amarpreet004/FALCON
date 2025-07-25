@@ -3,7 +3,7 @@ import HomePage from "./home/page";
 import FeaturesSectionDemo from "./home/Card";
 import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll";
 import React from "react";
-import { Available } from "./home/available/available";
+import  ProjectsShowcase  from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
 import {FAQ} from "../app/contact/faq";
 import DEV from "./home/Hero/DEV";
@@ -55,7 +55,7 @@ export default function Home() {
         <StickyScrollRevealDemo/>
       </div>
       <div className="mt-20">
-        <Available />
+        <ProjectsShowcase />
       </div>
       <div className="mt-20">
         <InfiniteMovingCardsDemo/>

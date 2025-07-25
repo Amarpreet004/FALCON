@@ -57,12 +57,7 @@ function Navbar({ className }: { className?: string }) {
             item="Home" 
             isActive={isMenuItemActive('Home') && active === null} 
             href="/"
-          >
-            {/* <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/">Home Page</HoveredLink>
-              <HoveredLink href="/home">Hero Section</HoveredLink>
-            </div> */}
-          </MenuItem>
+          />
 
           <MenuItem 
             setActive={setActive} 
@@ -70,14 +65,7 @@ function Navbar({ className }: { className?: string }) {
             item="About" 
             isActive={isMenuItemActive('About') && active === null} 
             href="/about"
-          >
-            {/* <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/about">About Us</HoveredLink>
-              <HoveredLink href="/about/Falconabout">Our Story</HoveredLink>
-              <HoveredLink href="/about/profilecards">Team</HoveredLink>
-              <HoveredLink href="/about/steps">Our Process</HoveredLink>
-            </div> */}
-          </MenuItem>
+          />
 
           <MenuItem 
             setActive={setActive} 
@@ -108,12 +96,7 @@ function Navbar({ className }: { className?: string }) {
             item="Contact" 
             isActive={isMenuItemActive('Contact') && active === null} 
             href="/contact"
-          >
-            {/* <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/contact">Contact Us</HoveredLink>
-              <HoveredLink href="/contact/Bookcall">Book a Call</HoveredLink>
-            </div> */}
-          </MenuItem>
+          />
         </div>
 
         {/* Get in Touch Button - Always visible */}

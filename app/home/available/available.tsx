@@ -48,12 +48,12 @@ const projects = [
 export default function ProjectsShowcase() {
   const [selected, setSelected] = useState(0);
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white py-12 px-2">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white py-4 px-2">
       <h2 className="text-4xl md:text-6xl font-bold text-[#5C0632] text-center mb-10 tracking-wide">OUR PROJECTS</h2>
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl items-start justify-center">
         {/* Left: Project names as glassmorphism buttons, 4 visible, scrollable */}
         <div
-          className="flex flex-col gap-6 flex-1 max-w-sm w-80% items-end overflow-y-auto hide-scrollbar"
+          className="flex flex-col gap-6 flex-1 max-w-sm w-80% items-end overflow-y-auto hide-scrollbar md:items-end items-center md:w-80% w-full"
           style={{ maxHeight: 6 * 72 + 18 }}
         > {/* 4 buttons, 72px each incl. gap */}
 <style jsx>{`

@@ -6,6 +6,7 @@ import { MobileNavigation } from "./_components/mobilenav/mobailenav";
 import Footer from "./_components/footer";
 import ThemeProvider from "./_components/theme-provider";
 import { Analytics } from '@vercel/analytics/next';
+import { GlassBubblesBackground } from "./background/background";
 
 
 const geistSans = Geist({
@@ -32,20 +33,20 @@ export default function RootLayout({
     <html lang="en" className="light" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      
       >
-          <Analytics />
+        <Analytics />
+        {/* Glass bubbles background effect on all pages */}
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <GlassBubblesBackground />
+        </div>
         {/* <GlobalCoolMode options={{ particleCount: 10, speedHorz: 8, speedUp: 28 }}> */}
-          <ThemeProvider />
-          
-          {/* Top Navbar - Responsive (full on desktop, simplified on mobile) */}
-          <Navbar />
-          
-          {/* Mobile Bottom Navigation - Only visible on mobile */}
-          <MobileNavigation />
-          
-          <main>{children}</main>
-          <Footer />
+        <ThemeProvider />
+        {/* Top Navbar - Responsive (full on desktop, simplified on mobile) */}
+        <Navbar />
+        {/* Mobile Bottom Navigation - Only visible on mobile */}
+        <MobileNavigation />
+        <main>{children}</main>
+        <Footer />
         {/* </GlobalCoolMode> */}
       </body>
     </html>

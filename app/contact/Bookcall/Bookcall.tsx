@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import emailjs from 'emailjs-com';
 import { Send, User, Mail, Phone, MessageSquare, Briefcase, CheckCircle } from "lucide-react";
 
 interface FormData {
@@ -50,7 +51,15 @@ export default function BookCall() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid";
     }
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else {
+      // Indian mobile number validation: 10 digits, starts with 6-9
+      const phonePattern = /^[6-9]\d{9}$/;
+      if (!phonePattern.test(formData.phone.trim())) {
+        newErrors.phone = "Phone number is invalid. Please enter a valid 10-digit mobile number.";
+      }
+    }
     if (formData.services.length === 0) newErrors.services = ["Please select at least one service"];
     
     setErrors(newErrors);
@@ -83,40 +92,26 @@ export default function BookCall() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!validateForm()) return;
-    
     setIsSubmitting(true);
     setSubmitError(null);
-    
     try {
-      // Send data to our API route
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          services: formData.services,
-          message: formData.message
-        })
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        console.log("Email sent successfully to falconsolutions492@gmail.com");
-        console.log("Form data submitted:", formData);
-        setIsSubmitted(true);
-      } else {
-        throw new Error(result.error || 'Failed to send email');
-      }
-      
+      const templateParams = {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        services: formData.services.join(', '),
+        description: formData.message
+      };
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+      setIsSubmitted(true);
     } catch (error) {
       console.error("Error sending email:", error);
       

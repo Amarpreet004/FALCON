@@ -122,7 +122,7 @@ const IphoneUI: React.FC = () => {
           width="80"
           height="30"
           rx="15"
-          fill="#000"
+          fill="#000"   
         />
         {/* Mobile navbar at the bottom as image */}
         

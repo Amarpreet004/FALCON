@@ -5,50 +5,50 @@ import IphoneUI from './crousel/iphoneui'
 const styles = {
   container: {
     width: '98%',
-    minHeight: '700px',
+    minHeight: '40vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
     background: '#5C0632',
     color: 'white',
-    borderRadius: '18px',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.18)',
-    margin: '2rem auto',
+    borderRadius: '2vw',
+    boxShadow: '0 2vw 6vw rgba(0,0,0,0.18)',
+    margin: '2vw auto',
     position: 'relative' as const,
   },
   content: {
     textAlign: 'center' as const,
     width: '100%',
-    padding: '0 1rem',
+    padding: '0 4%',
   },
   title: {
-    fontSize: '4rem',
+    fontSize: 'clamp(2rem, 6vw, 4rem)',
     fontWeight: 'bold',
-    marginBottom: '1rem',
-    letterSpacing: '2px',
-    textShadow: '3px 3px 6px rgba(0,0,0,0.4)',
+    marginBottom: '2vw',
+    letterSpacing: '0.2vw',
+    textShadow: '0.3vw 0.3vw 0.6vw rgba(0,0,0,0.4)',
     background: 'linear-gradient(45deg, #ffffff, #e2e8f0)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
   },
   subtitle: {
-    fontSize: '1.5rem',
+    fontSize: 'clamp(1rem, 2vw, 1.5rem)',
     opacity: 0.9,
     fontWeight: '300',
     lineHeight: '1.6',
-    marginTop: '1rem',
+    marginTop: '2vw',
   },
   badge: {
     display: 'inline-block',
-    padding: '0.5rem 1.5rem',
+    padding: '0.5vw 1.5vw',
     backgroundColor: 'rgba(255,255,255,0.2)',
-    borderRadius: '25px',
-    fontSize: '0.9rem',
+    borderRadius: '2vw',
+    fontSize: 'clamp(0.7rem, 1vw, 1rem)',
     fontWeight: '500',
-    marginBottom: '1rem',
-    backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255,255,255,0.3)',
+    marginBottom: '2vw',
+    backdropFilter: 'blur(1vw)',
+    border: '0.1vw solid rgba(255,255,255,0.3)',
   }
 }
 
@@ -56,7 +56,12 @@ const styles = {
 function DEV() {
   return (
     <div style={{ ...styles.container, flexDirection: 'row', paddingLeft: 'clamp(1rem, 8vw, 7rem)', paddingRight: 'clamp(1rem, 8vw, 7rem)' }}>
-      <div style={{ ...styles.content, textAlign: 'left', maxWidth: 600 }}>
+      <div style={{
+        ...styles.content,
+        textAlign: 'left',
+        width: '60%',
+        maxWidth: 'clamp(320px, 60vw, 700px)'
+      }}>
         <h1 style={{
           fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
           fontWeight: 700,

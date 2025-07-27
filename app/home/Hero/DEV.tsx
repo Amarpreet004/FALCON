@@ -57,9 +57,13 @@ const styles = {
 
 function DEV() {
   const [showIphone, setShowIphone] = useState(true);
+  const [showFeatures, setShowFeatures] = useState(true);
 
   useEffect(() => {
-    const handleResize = () => setShowIphone(window.innerWidth >= 1000);
+    const handleResize = () => {
+      setShowIphone(window.innerWidth >= 1000);
+      setShowFeatures(window.innerWidth >= 620);
+    };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -106,20 +110,22 @@ function DEV() {
             </>
           )}
         </h1>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: '2.5rem' }}>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
-            <span style={{ fontSize: '1.3em', marginRight: 12 }}>⚙️</span>
-            End-to-End Expertise
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
-            <span style={{ fontSize: '1.3em', marginRight: 12 }}>💲</span>
-            Performance-Driven Design
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
-            <span style={{ fontSize: '1.3em', marginRight: 12 }}>💬</span>
-            Brand Amplification
-          </li>
-        </ul>
+        {showFeatures && (
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: '2.5rem' }}>
+            <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
+              <span style={{ fontSize: '1.3em', marginRight: 12 }}>⚙️</span>
+              End-to-End Expertise
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
+              <span style={{ fontSize: '1.3em', marginRight: 12 }}>💲</span>
+              Performance-Driven Design
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
+              <span style={{ fontSize: '1.3em', marginRight: 12 }}>💬</span>
+              Brand Amplification
+            </li>
+          </ul>
+        )}
         <div style={buttonGroupStyle}>
           <button style={{
             background: 'white',

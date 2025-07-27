@@ -1,4 +1,5 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useState } from 'react'
 import IphoneUI from './crousel/iphoneui'
 
 // Styles object for component-specific styles
@@ -6,6 +7,7 @@ const styles = {
   container: {
     width: '98%',
     minHeight: '40vh',
+    maxHeight: '82vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -54,14 +56,38 @@ const styles = {
 
 
 function DEV() {
+  const [showIphone, setShowIphone] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => setShowIphone(window.innerWidth >= 1000);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Responsive styles for content centering
+  const contentStyle = {
+    ...styles.content,
+    textAlign: (showIphone ? 'left' : 'center') as React.CSSProperties['textAlign'],
+    width: showIphone ? '60%' : '100%',
+    maxWidth: showIphone ? 'clamp(320px, 60vw, 700px)' : '700px',
+    margin: showIphone ? undefined : '0 auto',
+    display: 'flex',
+    flexDirection: 'column' as React.CSSProperties['flexDirection'],
+    alignItems: showIphone ? 'flex-start' : 'center',
+    justifyContent: 'center',
+  };
+
+  const buttonGroupStyle = {
+    display: 'flex',
+    gap: '1rem',
+    flexWrap: 'wrap' as React.CSSProperties['flexWrap'],
+    justifyContent: showIphone ? 'flex-start' : 'center',
+  };
+
   return (
-    <div style={{ ...styles.container, flexDirection: 'row', paddingLeft: 'clamp(1rem, 8vw, 7rem)', paddingRight: 'clamp(1rem, 8vw, 7rem)' }}>
-      <div style={{
-        ...styles.content,
-        textAlign: 'left',
-        width: '60%',
-        maxWidth: 'clamp(320px, 60vw, 700px)'
-      }}>
+    <div style={{ ...styles.container, flexDirection: showIphone ? 'row' : 'column', paddingLeft: 'clamp(1rem, 8vw, 7rem)', paddingRight: 'clamp(1rem, 8vw, 7rem)', justifyContent: showIphone ? 'flex-start' : 'center' }}>
+      <div style={contentStyle}>
         <h1 style={{
           fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
           fontWeight: 700,
@@ -70,7 +96,15 @@ function DEV() {
           letterSpacing: '-1px',
           color: 'white',
         }}>
-      Your ideas.<br />Our execution.<br />Zero stress.<br /> Full impact
+          {showIphone ? (
+            <>
+              Your ideas.<br />Our execution.<br />Zero stress.<br /> Full impact
+            </>
+          ) : (
+            <>
+              Your ideas. Our execution.<br />Zero stress. Full impact
+            </>
+          )}
         </h1>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: '2.5rem' }}>
           <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', color: '#e5e5e5', fontSize: '1.15rem', fontWeight: 400 }}>
@@ -86,7 +120,7 @@ function DEV() {
             Brand Amplification
           </li>
         </ul>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div style={buttonGroupStyle}>
           <button style={{
             background: 'white',
             color: '#181818',
@@ -113,9 +147,21 @@ function DEV() {
           }}>Get In Touch</button>
         </div>
       </div>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', minWidth: 0, marginLeft: '2.5rem',  left: 'clamp(1rem, 8vw, 7rem)' }}>
-        <IphoneUI />
-      </div>
+      {showIphone && (
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            minWidth: 0,
+            marginLeft: '2.5rem',
+            left: 'clamp(1rem, 8vw, 7rem)',
+          }}
+        >
+          <IphoneUI />
+        </div>
+      )}
     </div>
   );
 }

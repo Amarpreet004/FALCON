@@ -22,7 +22,7 @@ const IphoneUI: React.FC = () => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center bg-transparent py-4 px-2">
       <div className="flex items-center justify-center w-full">
-        <div className="relative w-full max-w-xs aspect-[320/650] flex items-center justify-center" style={{ minHeight: 500 }}>
+        <div className="relative w-full max-w-xs aspect-[320/650] flex items-center justify-center" style={{ minHeight: 400 , maxHeight: 620 }}>
           {/* iPhone outline with transparent screen */}
           <div className="absolute inset-0 z-10 pointer-events-none" style={{ borderRadius: 60, border: '8px solid #000', background: 'transparent', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }} />
           {/* Notch */}

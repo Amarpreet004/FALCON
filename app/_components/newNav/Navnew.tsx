@@ -42,9 +42,8 @@ function Navbar({ className }: { className?: string }) {
             <img
               src="/FALCONLOGO.png"
               alt="Falcon Industry Logo"
-              width={80}
-              height={40}
-              className="h-8 w-auto"
+              className="h-7 w-20 sm:h-8 sm:w-28 md:h-10 md:w-36 lg:h-12 lg:w-44 object-contain transition-all duration-300"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
           </a>
         </div>

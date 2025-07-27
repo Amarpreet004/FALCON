@@ -37,12 +37,36 @@ const IphoneUI: React.FC = () => {
           >
             <rect x="0" y="0" width="80" height="30" rx="15" fill="#000" />
           </svg>
-          {/* Website preview fills the phone screen */}
-          <div className="absolute inset-0 z-0" style={{ borderRadius: 60, overflow: 'hidden' }}>
+          {/* Status bar: time, wifi, battery */}
+          <div
+            className="absolute z-30 w-full flex items-center justify-between px-6"
+            style={{ top: 32, left: 0, height: 24 }}
+          >
+            {/* Time (left) */}
+            <span className="text-xs font-semibold text-white" style={{ letterSpacing: 1 }}>{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+            {/* WiFi and Battery (right) */}
+            <div className="flex items-center gap-2">
+              {/* WiFi icon */}
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.93 7.36a12.07 12.07 0 0114.14 0" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M5.47 10.02a8.07 8.07 0 019.06 0" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M8.01 12.68a4.07 4.07 0 013.98 0" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                <circle cx="10" cy="16" r="1" fill="white" />
+              </svg>
+              {/* Battery icon */}
+              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" className="text-white" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="2" width="20" height="8" rx="2" fill="#222" stroke="white" strokeWidth="1.5"/>
+                <rect x="3" y="4" width="16" height="4" rx="1" fill="#4ade80" />
+                <rect x="21" y="4" width="2" height="4" rx="1" fill="white" />
+              </svg>
+            </div>
+          </div>
+          {/* Website preview fills the phone screen, starts below notch/status bar */}
+          <div className="absolute z-0 w-full h-full" style={{ borderRadius: 0, overflow: 'hidden', top: 0, left: 0, paddingTop: 48 }}>
             <iframe
               src="https://www.falconwebsolution.com"
               title="Falcon Web Solution"
-              className="w-full h-full min-h-[468px]"
+              className="w-full h-full min-h-[420px]"
               style={{ border: "none", borderRadius: 60 }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               loading="lazy"

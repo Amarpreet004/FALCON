@@ -2,6 +2,7 @@
 import HomePage from "./home/page";
 import FeaturesSectionDemo from "./home/Card";
 import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll";
+import Score from "./home/score/score";
 import React from "react";
 import  ProjectsShowcase  from "./home/available/available";
 import { InfiniteMovingCardsDemo } from "./home/review/review";
@@ -51,8 +52,11 @@ export default function Home() {
         <FeaturesSectionDemo/>
       </section> */}
       {/* Other Sections with spacing */}
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <StickyScrollRevealDemo/>
+      </div> */}
+      <div className="mt-20">
+        <Score />
       </div>
       <div className="mt-20">
         <ProjectsShowcase />

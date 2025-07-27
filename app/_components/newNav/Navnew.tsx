@@ -103,7 +103,8 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center">
           <a
             href="/contact/Bookcall"
-            className="px-4 py-2 bg-[#5C0632] border border-transparent  text-white rounded-lg  font-medium transition-all duration-300"
+            className="max-w-xs sm:max-w-sm md:max-w-fit px-3 sm:px-4 py-2 sm:py-2.5 bg-[#5C0632] border border-transparent text-white rounded-lg font-medium transition-all duration-300 text-base sm:text-lg md:text-base text-center"
+            style={{ minWidth: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
           >
             Get in Touch
           </a>

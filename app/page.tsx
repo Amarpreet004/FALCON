@@ -58,9 +58,9 @@ export default function Home() {
       <div className="mt-20">
         <Score />
       </div>
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <ProjectsShowcase />
-      </div>
+      </div> */}
       <div className="mt-20">
         <InfiniteMovingCardsDemo/>
       </div>

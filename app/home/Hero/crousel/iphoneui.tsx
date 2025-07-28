@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
  * Optimized iPhone UI outline using SVG for sharpness and scalability.
  */
 const IphoneFrame: React.FC = () => (
-  <div className="relative w-full max-w-xs aspect-[320/650] flex items-center justify-center" style={{ minHeight: 400, maxHeight: 620 }}>
+  <div className="relative w-full max-w-xs aspect-[320/650] flex items-center justify-center" style={{ minHeight: 400, maxHeight: 520 }}>
     {/* iPhone outline with transparent screen */}
     <div className="absolute inset-0 z-10 pointer-events-none" style={{ borderRadius: 60, border: '8px solid #000', background: 'transparent', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }} />
     {/* Status bar: time, wifi, battery, with white background */}

@@ -7,7 +7,7 @@ const styles = {
   container: {
     width: '98%',
     minHeight: '40vh',
-    maxHeight: '82vh',
+    maxHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',

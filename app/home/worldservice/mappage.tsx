@@ -22,9 +22,7 @@ export function WorldMapDemo() {
             ))}
           </span>
         </p>
-        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-          Discover top digital services worldwide—web development, design, marketing, and more. Connect with expert providers for your business needs, wherever you are. Empower your growth with trusted global solutions.
-        </p>
+        
       </div>
       <WorldMap
         dots={[

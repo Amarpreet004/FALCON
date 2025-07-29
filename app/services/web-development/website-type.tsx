@@ -35,7 +35,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "E-commerce Store",
     description: "Full-featured online store with payment processing, inventory management, and customer accounts for seamless shopping experiences",
-    icon: <ShoppingCart className="w-7 h-7" />,
+    icon: <ShoppingCart className="w-7 h-7 text-[#5C0632]" />,
     category: "Business",
     color: "from-gray-500 to-white",
     complexity: "Complex",
@@ -45,7 +45,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Portfolio Website",
     description: "Personal showcase for designers, developers, and artists to display their work and attract potential clients",
-    icon: <User className="w-7 h-7" />,
+    icon: <User className="w-7 h-7 text-[#5C0632]" />,
     category: "Personal",
     color: "from-white to-gray-600",
     complexity: "Simple",
@@ -55,7 +55,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Corporate Website",
     description: "Professional online presence for companies with service descriptions, team profiles, and comprehensive contact information",
-    icon: <Building className="w-7 h-7" />,
+    icon: <Building className="w-7 h-7 text-[#5C0632]" />,
     category: "Business",
     color: "from-gray-400 to-gray-700",
     complexity: "Medium",
@@ -65,7 +65,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Online Learning Platform",
     description: "E-learning site with course content, student dashboards, progress tracking, and interactive quizzes",
-    icon: <BookOpen className="w-7 h-7" />,
+    icon: <BookOpen className="w-7 h-7 text-[#5C0632]" />,
     category: "Education",
     color: "from-gray-600 to-black",
     complexity: "Complex",
@@ -75,7 +75,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Startup Landing Page",
     description: "High-converting landing page for startups to showcase value propositions and capture qualified leads",
-    icon: <TrendingUp className="w-7 h-7" />,
+    icon: <TrendingUp className="w-7 h-7 text-[#5C0632]" />,
     category: "Startup",
     color: "from-gray-300 to-gray-600",
     complexity: "Simple",
@@ -85,7 +85,7 @@ const websiteTypes: WebsiteType[] = [
   {
     name: "Social Platform",
     description: "Community platform with user profiles, messaging systems, and intelligent matching algorithms",
-    icon: <Heart className="w-7 h-7" />,
+    icon: <Heart className="w-7 h-7 text-[#5C0632]" />,
     category: "Social",
     color: "from-gray-700 to-black",
     complexity: "Complex",
@@ -111,26 +111,21 @@ const WebsiteTypeCard: React.FC<{ websiteType: WebsiteType; index: number }> = (
       whileHover={{ y: -10, scale: 1.02 }}
       className="group relative"
     >
-      <div className="relative bg-slate-800/90 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden h-full">
-        {/* Gradient overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${websiteType.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-        
-        {/* Glowing border effect */}
-        <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${websiteType.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}></div>
+      <div className="relative bg-white rounded-3xl border border-[#5C0632]/10 shadow-lg overflow-hidden h-full">
+        {/* ...existing code... */}
 
         {/* Header with floating icon */}
         <div className="relative p-6 pb-4">
           <div className="flex items-start justify-between mb-4">
             <motion.div
-              className={`relative p-4 bg-gradient-to-br ${websiteType.color} rounded-2xl shadow-lg`}
+              className="relative p-4 bg-[#F8F9FA] rounded-2xl shadow"
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               {websiteType.icon}
-              
               {/* Floating particles */}
               <motion.div
-                className="absolute -top-1 -right-1 w-3 h-3 bg-white/60 rounded-full"
+                className="absolute -top-1 -right-1 w-3 h-3 bg-[#5C0632]/20 rounded-full"
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5],
@@ -143,39 +138,28 @@ const WebsiteTypeCard: React.FC<{ websiteType: WebsiteType; index: number }> = (
               />
             </motion.div>
 
-            <div className="flex flex-col items-end gap-2">
-              <span className="text-xs text-gray-400 font-medium tracking-wider uppercase">
-                {websiteType.category}
-              </span>
-              <div className={`flex items-center gap-1 px-3 py-1 ${config.bg} ${config.border} border rounded-full`}>
-                <Star className={`w-3 h-3 ${config.color}`} />
-                <span className={`text-xs font-medium ${config.color}`}>
-                  {websiteType.complexity}
-                </span>
-              </div>
-            </div>
+            {/* Removed category and complexity pill from card header */}
           </div>
 
-          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+          <h3 className="text-xl font-bold text-[#5C0632] mb-3">
             {websiteType.name}
           </h3>
-          
-          <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+          <p className="text-base text-[#3A3F4A] leading-relaxed">
             {websiteType.description}
           </p>
         </div>
 
         {/* Features section */}
         <div className="px-6 pb-4">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-cyan-400" />
+          <h4 className="text-sm font-semibold text-[#5C0632] mb-3 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-[#5C0632]" />
             Key Features
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {websiteType.features.map((feature, featureIndex) => (
               <motion.div
                 key={featureIndex}
-                className="text-xs text-gray-400 bg-slate-700/50 px-3 py-2 rounded-lg border border-slate-600/50"
+                className="text-xs text-[#5C0632] bg-[#F8F9FA] px-3 py-2 rounded-lg border border-[#5C0632]/10"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: (index * 0.1) + (featureIndex * 0.05) }}
@@ -189,25 +173,20 @@ const WebsiteTypeCard: React.FC<{ websiteType: WebsiteType; index: number }> = (
         {/* Footer */}
         <div className="px-6 pb-6 pt-2">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="text-xs">Timeline: {websiteType.timeline}</span>
-            </div>
-            
-            <motion.button
-              className="group/btn p-2 bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20 rounded-lg hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300"
+            {/* Removed timeline from card footer */}
+            <motion.a
+              href="/contact" // Update this path if your Get In Touch form is elsewhere
+              className="group/btn px-6 py-2 bg-[#5C0632] border border-[#5C0632]/30 rounded-full text-white font-semibold hover:bg-[#660033] transition-all duration-300 shadow-lg flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowUpRight className="w-4 h-4 text-cyan-400 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
-            </motion.button>
+              Get a Quote
+              <ArrowUpRight className="w-4 h-4 text-white group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+            </motion.a>
           </div>
         </div>
 
-        {/* Hover effect line */}
-        <motion.div
-          className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${websiteType.color} w-0 group-hover:w-full transition-all duration-500`}
-        />
+        {/* ...existing code... */}
       </div>
     </motion.div>
   );
@@ -215,12 +194,7 @@ const WebsiteTypeCard: React.FC<{ websiteType: WebsiteType; index: number }> = (
 
 export default function WebsiteTypesCards() {
   return (
-    <div className="relative bg-gradient-to-b from-slate-900 via-purple-900/20 to-slate-900 py-20 px-4 sm:px-6 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
-      </div>
+    <div className="relative bg-transparent py-20 px-4 sm:px-6 overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Header */}
@@ -230,22 +204,14 @@ export default function WebsiteTypesCards() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20 rounded-full text-cyan-300 text-sm font-medium backdrop-blur-sm mb-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Globe className="w-4 h-4" />
-            Diverse Project Portfolio
-          </motion.div>
+          {/* Removed 'Diverse Project Portfolio' pill from header */}
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Website Types We</span>{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">Develop</span>
+            <span className="text-black">Website Types We</span>{" "}
+            <span className="text-[#5C0632]">Develop</span>
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#5C0632] max-w-3xl mx-auto leading-relaxed">
             From bold and artistic to sleek and professional — we build websites 
             that perfectly match your vision and business goals
           </p>
@@ -265,17 +231,16 @@ export default function WebsiteTypesCards() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <p className="text-gray-400 mb-6">Ready to start your project?</p>
+          <p className="text-[#5C0632] mb-6">Ready to start your project?</p>
           <motion.button
-            className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden shadow-lg shadow-cyan-500/25"
+            className="group relative px-8 py-4 bg-[#5C0632] text-white font-semibold rounded-full overflow-hidden shadow-lg shadow-[#5C0632]/25"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative flex items-center gap-2">
-              <Building className="w-5 h-5" />
+              <Building className="w-5 h-5 text-white" />
               Discuss Your Project
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+              <ArrowUpRight className="w-5 h-5 text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </span>
           </motion.button>
         </motion.div>

@@ -1,6 +1,56 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+
+const macWebsites = [
+  "https://godigitifynexsus.vercel.app/services/dba",
+  "https://www.theuniques.in/"
+];
+
+function MacbookShowcase() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % macWebsites.length);
+    }, 20000);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <div className="relative flex justify-center items-center h-[600px] md:h-[600px] sm:h-[400px]">
+      <div className="relative w-[600px] h-[400px] md:w-[600px] md:h-[400px] sm:w-[350px] sm:h-[220px] flex items-center justify-center">
+        <img src="/mac.jpeg" alt="Macbook" className="absolute w-full h-full object-contain z-10 pointer-events-none select-none" />
+        {/* Responsive Macbook screen area overlay with iframe */}
+        <div
+          className="absolute z-20 shadow-lg border-0 border-black/20 rounded-[10px] overflow-hidden"
+          style={{
+            left: '50%',
+            top: '48%',
+            width: '80%',
+            height: '80%',
+            minWidth: '220px',
+            minHeight: '120px',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            transform: 'translate(-50%, -50%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'white',
+          }}
+        >
+          <iframe
+            src={macWebsites[current]}
+            title="Macbook Showcase"
+            className="w-full h-full border-none"
+            allow="autoplay; encrypted-media"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            style={{ minWidth: '200px', minHeight: '100px', maxWidth: '100%', maxHeight: '100%' }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 import { motion, AnimatePresence } from "framer-motion";
 import { Code, Zap, Globe, Rocket, ArrowRight, Play } from "lucide-react";
 
@@ -111,30 +161,10 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent overflow-hidden mt-8 md:mt-16">
       {/* Animated background elements */}
-      <div className="absolute inset-0">
-        {/* Moving gradient orbs */}
-        <motion.div
-          className="absolute w-96 h-96 bg-gradient-to-r from-white/10 to-gray-300/20 rounded-full blur-3xl"
-          animate={{
-            x: mousePosition.x * 0.02,
-            y: mousePosition.y * 0.02,
-          }}
-          transition={{ type: "spring", stiffness: 50, damping: 30 }}
-        />
-        
-        <motion.div
-          className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-gray-400/20 to-white/20 rounded-full blur-3xl"
-          animate={{
-            x: mousePosition.x * -0.03,
-            y: mousePosition.y * -0.03,
-          }}
-          transition={{ type: "spring", stiffness: 30, damping: 40 }}
-        />
-        
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        {/* No background, no orbs, no grid. Fully transparent. */}
       </div>
 
       <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 z-10">
@@ -151,9 +181,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-white/10 to-gray-300/10 border border-white/20 rounded-full text-gray-300 text-sm font-medium backdrop-blur-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-[#5C0632]/20 rounded-full text-[#5C0632] text-sm font-medium backdrop-blur-sm"
             >
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-[#5C0632] rounded-full animate-pulse"></div>
               Currently Available for New Projects
             </motion.div>
 
@@ -164,12 +194,12 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 1 }}
               >
-                <span className="text-white">Build.</span>{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-white">Launch.</span>{" "}
-                <span className="text-white">Grow.</span>
+                <span className="text-[#5C0632]">Build.</span>{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#660033] to-[#5C0632]">Launch.</span>{" "}
+                <span className="text-[#5C0632]">Grow.</span>
                 <br />
                 <motion.span 
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-200"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#5C0632] to-[#660033]"
                   animate={{ 
                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
                   }}
@@ -177,11 +207,11 @@ const Hero = () => {
                 >
                   Digital Experiences
                 </motion.span>
-                <span className="text-white">.</span>
+                <span className="text-[#5C0632]">.</span>
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-gray-300 max-w-2xl leading-relaxed"
+                className="text-xl text-[#3A3F4A] max-w-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
@@ -231,101 +261,26 @@ const Hero = () => {
               transition={{ delay: 1.2 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">250+</div>
-                <div className="text-sm text-gray-400">Projects</div>
+                <div className="text-2xl font-bold text-[#5C0632]">250+</div>
+                <div className="text-sm text-[#3A3F4A]">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">98%</div>
-                <div className="text-sm text-gray-400">Success Rate</div>
+                <div className="text-2xl font-bold text-[#5C0632]">98%</div>
+                <div className="text-sm text-[#3A3F4A]">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-sm text-gray-400">Support</div>
+                <div className="text-2xl font-bold text-[#5C0632]">24/7</div>
+                <div className="text-sm text-[#3A3F4A]">Support</div>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Right - 3D Orbit UI */}
-          <motion.div 
-            className="relative flex justify-center items-center h-[600px]"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
-            {/* Orbit Rings */}
-            <div className="absolute w-[500px] h-[500px] rounded-full border border-dashed border-white/30">
-              <motion.div 
-                className="w-full h-full"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              >
-                {renderOrbitIcons()}
-              </motion.div>
-            </div>
-
-            <div className="absolute w-[400px] h-[400px] rounded-full border border-dashed border-gray-400/20">
-              <motion.div 
-                className="w-full h-full"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              />
-            </div>
-
-            {/* Central Hub */}
-            <motion.div
-              className="relative w-32 h-32 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl shadow-white/20 flex items-center justify-center"
-              animate={{
-                boxShadow: [
-                  "0 0 30px rgba(255, 255, 255, 0.3)",
-                  "0 0 50px rgba(255, 255, 255, 0.4)",
-                  "0 0 30px rgba(255, 255, 255, 0.3)"
-                ]
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              >
-                <Code className="w-12 h-12 text-white" />
-              </motion.div>
-              
-              {/* Pulsing ring */}
-              <motion.div
-                className="absolute inset-0 rounded-3xl border-2 border-white/50"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.8, 0.3, 0.8]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </motion.div>
-
-            {/* Floating particles */}
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-2 h-2 bg-gradient-to-r from-white to-gray-300 rounded-full"
-                style={{
-                  left: `${20 + (i * 15)}%`,
-                  top: `${30 + (i * 10)}%`,
-                }}
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.4, 1, 0.4],
-                }}
-                transition={{
-                  duration: 2 + i * 0.5,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                }}
-              />
-            ))}
-          </motion.div>
+          <MacbookShowcase />
         </div>
       </main>
     </div>
   );
-};
+}
 
 export default Hero;

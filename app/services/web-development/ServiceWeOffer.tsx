@@ -101,12 +101,9 @@ const WebDevelopmentServices: React.FC = () => {
   }
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-slate-900 via-gray-900/20 to-slate-900 min-h-screen overflow-hidden">
+    <section className="relative py-20 px-4 bg-white min-h-screen overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-gradient-to-r from-gray-600/20 to-white/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-gradient-to-r from-white/20 to-gray-600/20 rounded-full blur-3xl"></div>
-      </div>
+      <div className="absolute inset-0"></div>
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Header */}
@@ -116,22 +113,14 @@ const WebDevelopmentServices: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-500/10 to-white/10 border border-gray-500/20 rounded-full text-gray-300 text-sm font-medium backdrop-blur-sm mb-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Star className="w-4 h-4" />
-            Professional Web Development Services
-          </motion.div>
+          
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Services We</span>{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-white">Offer</span>
+            <span className="text-black">Services We</span>{" "}
+            <span className="text-[#5C0632]">Offer</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
             We build digital experiences that combine cutting-edge technology
             with exceptional design and performance
           </p>
@@ -146,7 +135,7 @@ const WebDevelopmentServices: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <div className="lg:sticky lg:top-8">
-              <h3 className="text-2xl font-bold text-white mb-8 hidden lg:block">Our Specializations</h3>
+              <h3 className="text-2xl font-bold text-black mb-8 hidden lg:block">Our Specializations</h3>
               <div className="flex lg:flex-col gap-4 overflow-x-auto pb-4 lg:pb-0 lg:overflow-visible">
                 {webServices.map((service, index) => (
                   <motion.button
@@ -154,8 +143,8 @@ const WebDevelopmentServices: React.FC = () => {
                     onClick={() => setActiveService(service.id)}
                     className={`group relative flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 min-w-max lg:min-w-0 backdrop-blur-md border ${
                       activeService === service.id
-                        ? `bg-slate-800/90 border-white/20 shadow-lg shadow-white/10`
-                        : 'bg-slate-800/50 hover:bg-slate-800/70 border-white/10 hover:border-white/20'
+                        ? `bg-[#5C0632] border-[#5C0632]/20 shadow-lg shadow-[#5C0632]/10 text-white`
+                        : 'bg-white border-[#5C0632]/10 hover:border-[#5C0632]/20 text-[#5C0632]'
                     }`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -163,20 +152,18 @@ const WebDevelopmentServices: React.FC = () => {
                     whileHover={{ scale: 1.02, x: 5 }}
                   >
                     {/* Gradient overlay */}
-                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                    
+                    <div className="absolute inset-0 rounded-2xl bg-[#5C0632] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     <motion.div 
-                      className={`relative p-3 rounded-xl ${activeService === service.id ? `bg-gradient-to-r ${service.gradient}` : 'bg-slate-700/50'}`}
+                      className={`relative p-3 rounded-xl bg-white shadow`}
                       whileHover={{ rotate: 5 }}
                     >
-                      <service.icon className={`w-6 h-6 ${activeService === service.id ? 'text-white' : service.color}`} />
+                      <service.icon className="w-6 h-6 text-[#5C0632]" />
                     </motion.div>
                     <div className="relative text-left">
-                      <h4 className={`font-semibold ${activeService === service.id ? 'text-white' : 'text-gray-300'}`}>
+                      <h4 className={`font-semibold ${activeService === service.id ? 'text-white' : 'text-[#5C0632]'}`}> 
                         {service.title}
                       </h4>
                     </div>
-                    
                     {activeService === service.id && (
                       <motion.div
                         className="absolute right-4"
@@ -211,44 +198,44 @@ const WebDevelopmentServices: React.FC = () => {
                   className="relative"
                 >
                   {/* Glowing background */}
-                  <div className={`absolute -inset-4 bg-gradient-to-r ${activeServiceData.gradient} opacity-10 blur-2xl rounded-3xl`}></div>
+                  <div className={`absolute -inset-4 bg-[#5C0632] opacity-10 blur-2xl rounded-3xl`}></div>
                   
-                  <div className="relative bg-slate-800/90 backdrop-blur-md rounded-3xl border border-white/10 p-8 shadow-2xl">
+                  <div className="relative bg-white backdrop-blur-md rounded-3xl border border-[#5C0632]/10 p-8 shadow-2xl">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
                       <motion.div 
-                        className={`p-6 rounded-2xl bg-gradient-to-r ${activeServiceData.gradient} shadow-lg`}
+                        className="p-6 rounded-2xl bg-white shadow-lg"
                         whileHover={{ scale: 1.05, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                       >
-                        <activeServiceData.icon className="w-10 h-10 text-white" />
+                        <activeServiceData.icon className="w-10 h-10 text-[#5C0632]" />
                       </motion.div>
                       <div>
-                        <h3 className="text-3xl font-bold text-white mb-2">{activeServiceData.title}</h3>
-                        <div className={`h-1 w-24 rounded-full bg-gradient-to-r ${activeServiceData.gradient}`} />
+                        <h3 className="text-3xl font-bold text-[#5C0632] mb-2">{activeServiceData.title}</h3>
+                        <div className="h-1 w-24 rounded-full bg-[#5C0632]" />
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8">{activeServiceData.description}</p>
+                    <p className="text-[#5C0632] text-lg leading-relaxed mb-8">{activeServiceData.description}</p>
 
                     {/* Features */}
                     <div className="mb-8">
-                      <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-white" />
+                      <h4 className="text-xl font-semibold text-[#5C0632] mb-4 flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-[#5C0632]" />
                         Key Features
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {activeServiceData.features.map((feature, index) => (
                           <motion.div
                             key={feature}
-                            className="flex items-center gap-3 p-3 bg-slate-700/50 rounded-lg border border-slate-600/50"
+                            className="flex items-center gap-3 p-3 bg-[#5C0632]/10 rounded-lg border border-[#5C0632]/20"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${activeServiceData.gradient}`}></div>
-                            <span className="text-gray-300 text-sm">{feature}</span>
+                            <div className="w-2 h-2 rounded-full bg-[#5C0632]" />
+                            <span className="text-[#5C0632] text-sm">{feature}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -256,15 +243,15 @@ const WebDevelopmentServices: React.FC = () => {
 
                     {/* Technologies */}
                     <div className="mb-8">
-                      <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                        <Database className="w-5 h-5 text-gray-300" />
+                      <h4 className="text-xl font-semibold text-[#5C0632] mb-4 flex items-center gap-2">
+                        <Database className="w-5 h-5 text-[#5C0632]" />
                         Technologies We Use
                       </h4>
                       <div className="flex flex-wrap gap-3">
                         {activeServiceData.technologies.map((tech, index) => (
                           <motion.span
                             key={tech}
-                            className="px-4 py-2 rounded-full text-sm font-medium bg-slate-700/70 backdrop-blur-sm text-gray-300 border border-slate-600/50 hover:border-white/20 transition-colors duration-300"
+                            className="px-4 py-2 rounded-full text-sm font-medium bg-[#5C0632]/10 backdrop-blur-sm text-[#5C0632] border border-[#5C0632]/20 hover:border-[#5C0632]/40 transition-colors duration-300"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.05 }}
@@ -277,22 +264,16 @@ const WebDevelopmentServices: React.FC = () => {
                     </div>
 
                     {/* CTA */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-slate-600/50 gap-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-400">
-                        <Star className="w-4 h-4 text-white" />
-                        <span>Enterprise-grade solutions</span>
-                      </div>
-                      
-                      <motion.button
-                        className={`group px-6 py-3 bg-gradient-to-r ${activeServiceData.gradient} text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300`}
+                    <div className="flex flex-col sm:flex-row items-center justify-end pt-6 border-t border-[#5C0632]/20 gap-4">
+                      <motion.a
+                        href="/contact"
+                        className="group px-6 py-3 bg-[#5C0632] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <span className="flex items-center gap-2">
-                          Get Started
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </span>
-                      </motion.button>
+                        Get a Quote
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </motion.a>
                     </div>
                   </div>
                 </motion.div>

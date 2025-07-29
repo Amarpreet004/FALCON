@@ -2,10 +2,13 @@
 import { Suspense } from "react";
 import { WorldMapDemo } from "../home/worldservice/mappage";
 import ProfileCardI from "./profilecards/ProfileCardI";
-import GallerySection from "./courese/courses";
+
 import { InfiniteMovingCardsDemo } from "../home/review/review";
-import AboutFalcon from "./Falconabout/aboutfalcon";
-import Steps from "./steps/steps";
+import WebDevToolsCards from "./whychosseus/why";
+import ScoreSection from "./score/score";
+import { TimelineDemo } from "./steps/finaltimeline";
+import { TeamCard } from "./Team/team";
+
 
 function LoadingFallback() {
   return (
@@ -23,21 +26,30 @@ export default function About() {
           <WorldMapDemo/>
         </div>
       </Suspense>
+      <div className="flex justify-center my-8 w-full">
+        <ScoreSection />
+      </div>
+      <div className="flex justify-center my-8 w-full">
+        <WebDevToolsCards />
+      </div>
+      
+      
       <Suspense fallback={<LoadingFallback />}>
-        <AboutFalcon />
-      </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
-        <Steps />
+        <div className="flex justify-center my-8 w-full">
+          <TimelineDemo />
+        </div>
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <ProfileCardI />
       </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
-        <GallerySection />
-      </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
+      
+      <div className="flex justify-center my-8 w-full">
+        <TeamCard />
+      </div>
+      <Suspense fallback={<LoadingFallback />}> 
         <InfiniteMovingCardsDemo/>
       </Suspense>
+      
     </main>
   );
 }

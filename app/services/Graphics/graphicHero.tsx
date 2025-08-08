@@ -11,23 +11,40 @@ const SocialManagerLanding: React.FC = () => {
   // Generate floating social icons
   useEffect(() => {
     const icons = [
+<<<<<<< HEAD
       { id: 1, x: 85, y: 15, icon: 'facebook', color: 'bg-blue-500' },
       { id: 2, x: 10, y: 35, icon: 'twitter', color: 'bg-sky-400' },
       { id: 3, x: 90, y: 45, icon: 'instagram', color: 'bg-gradient-to-r from-purple-500 to-pink-500' },
       { id: 5, x: 85, y: 75, icon: 'linkedin', color: 'bg-blue-600' },
       { id: 6, x: 5, y: 85, icon: 'message', color: 'bg-orange-500' },
+=======
+      { id: 1, x: 85, y: 15, icon: 'facebook', color: 'bg-brand-maroon' },
+      { id: 2, x: 10, y: 35, icon: 'twitter', color: 'bg-brand-orange' },
+      { id: 3, x: 90, y: 45, icon: 'instagram', color: 'bg-gradient-to-r from-brand-maroon to-brand-orange' },
+      { id: 5, x: 85, y: 75, icon: 'linkedin', color: 'bg-brand-maroon' },
+      { id: 6, x: 5, y: 85, icon: 'message', color: 'bg-brand-orange' },
+>>>>>>> 9fbb53d (self)
     ];
     setFloatingIcons(icons);
   }, []);
 
   const SocialIcon = ({ type, className }: { type: string; className: string }) => {
     const iconMap = {
+<<<<<<< HEAD
       facebook: <div className="w-6 h-6 bg-white rounded text-blue-500 flex items-center justify-center font-bold text-sm">f</div>,
       twitter: <MessageCircle className="w-6 h-6 text-white" />,
       instagram: <div className="w-6 h-6 bg-white rounded text-pink-500 flex items-center justify-center font-bold text-sm">@</div>,
       heart: <Heart className="w-6 h-6 text-white fill-current" />,
       linkedin: <Users className="w-6 h-6 text-white" />,
       message: <Share2 className="w-6 h-6 text-white" />,
+=======
+      facebook: <div className="w-6 h-6 bg-white rounded text-brand-maroon flex items-center justify-center font-bold text-sm">f</div>,
+      twitter: <MessageCircle className="w-6 h-6 text-brand-orange" />,
+      instagram: <div className="w-6 h-6 bg-white rounded text-brand-orange flex items-center justify-center font-bold text-sm">@</div>,
+      heart: <Heart className="w-6 h-6 text-brand-maroon fill-current" />,
+      linkedin: <Users className="w-6 h-6 text-brand-maroon" />,
+      message: <Share2 className="w-6 h-6 text-brand-orange" />,
+>>>>>>> 9fbb53d (self)
     };
     
     return <div className={className}>{iconMap[type as keyof typeof iconMap]}</div>;
@@ -43,7 +60,11 @@ const SocialManagerLanding: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden relative">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-brand-maroon/10 via-brand-orange/10 to-white overflow-hidden relative">
+>>>>>>> 9fbb53d (self)
       {/* Floating Social Icons */}
       {floatingIcons.map((icon) => (
         <div
@@ -61,6 +82,7 @@ const SocialManagerLanding: React.FC = () => {
       ))}
 
       {/* Main Container */}
+<<<<<<< HEAD
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Hero Section */}
@@ -74,14 +96,36 @@ const SocialManagerLanding: React.FC = () => {
             </div>
             
             <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+=======
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Hero Section */}
+  <div className="grid lg:grid-cols-2 gap-12 items-center py-12">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-5xl lg:text-6xl font-bold text-brand-maroon leading-tight">
+                Elevate Your Brand With <span className='text-brand-orange'>Visual Content</span> & Powerful Tools
+              </h1>
+            </div>
+            
+            <p className="text-lg text-brand-maroon max-w-md leading-relaxed">
+>>>>>>> 9fbb53d (self)
               Create stunning social media graphics, manage all your accounts, and track performance - all in one place.
             </p>
 
             <div className="flex space-x-4">
+<<<<<<< HEAD
               <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
                 Start Designing
               </button>
               <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-medium transition-all">
+=======
+              <button className="bg-brand-orange hover:bg-brand-maroon text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+                Start Designing
+              </button>
+              <button className="border-2 border-brand-maroon hover:border-brand-orange text-brand-maroon px-6 py-3 rounded-lg font-medium transition-all">
+>>>>>>> 9fbb53d (self)
                 Watch Demo
               </button>
             </div>
@@ -94,6 +138,7 @@ const SocialManagerLanding: React.FC = () => {
                 <img 
                   src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwEWQVoDRN98Yq5oMVpl3Pis7wxueh1Ofb0XF4"
                   alt="Social Media Manager"
+<<<<<<< HEAD
                   className="w-full"
                 />
               </div>
@@ -108,6 +153,21 @@ const SocialManagerLanding: React.FC = () => {
               <MessageCircle className="w-8 h-8 text-white" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center shadow-lg animate-bounce" style={{ animationDelay: '0.5s' }}>
+=======
+                  className="w-full rounded-2xl border-4 border-brand-maroon"
+                />
+              </div>
+            </div>
+            {/* Floating Action Icons */}
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center shadow-lg animate-bounce">
+              <Heart className="w-8 h-8 text-white fill-current" />
+              <span className="absolute -top-1 -right-1 bg-white text-brand-orange text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">24</span>
+            </div>
+            <div className="absolute top-20 -left-4 w-16 h-16 bg-brand-maroon rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <MessageCircle className="w-8 h-8 text-white" />
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center shadow-lg animate-bounce" style={{ animationDelay: '0.5s' }}>
+>>>>>>> 9fbb53d (self)
               <Share2 className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -116,8 +176,13 @@ const SocialManagerLanding: React.FC = () => {
         {/* Graphic Tools Section */}
         <div className="py-16">
           <div className="text-center mb-12">
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-900">Powerful Graphic Tools</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+=======
+            <h2 className="text-3xl font-bold text-brand-maroon">Powerful Graphic Tools</h2>
+            <p className="text-brand-maroon mt-4 max-w-2xl mx-auto">
+>>>>>>> 9fbb53d (self)
               Everything you need to create professional social media content without design skills
             </p>
           </div>
@@ -126,6 +191,7 @@ const SocialManagerLanding: React.FC = () => {
             {graphicTools.map((tool) => (
               <div 
                 key={tool.name}
+<<<<<<< HEAD
                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
@@ -133,6 +199,15 @@ const SocialManagerLanding: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{tool.name}</h3>
                 <p className="text-gray-600">{tool.description}</p>
+=======
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-brand-maroon"
+              >
+                <div className="w-12 h-12 bg-brand-orange rounded-lg flex items-center justify-center text-white mb-4">
+                  {tool.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-brand-maroon mb-2">{tool.name}</h3>
+                <p className="text-brand-maroon">{tool.description}</p>
+>>>>>>> 9fbb53d (self)
               </div>
             ))}
           </div>
@@ -143,52 +218,92 @@ const SocialManagerLanding: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <div className="relative">
+<<<<<<< HEAD
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl opacity-20 blur-lg"></div>
                 <img 
                   src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwEWQVoDRN98Yq5oMVpl3Pis7wxueh1Ofb0XF4"
                   alt="Design Preview"
                   className="relative rounded-xl shadow-2xl w-full"
+=======
+                <div className="absolute -inset-4 bg-gradient-to-r from-brand-maroon to-brand-orange rounded-2xl opacity-20 blur-lg"></div>
+                <img 
+                  src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwEWQVoDRN98Yq5oMVpl3Pis7wxueh1Ofb0XF4"
+                  alt="Design Preview"
+                  className="relative rounded-xl shadow-2xl w-full border-4 border-brand-maroon"
+>>>>>>> 9fbb53d (self)
                 />
               </div>
             </div>
             <div className="lg:w-1/2 space-y-6">
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-gray-900">Real-time Design Preview</h2>
               <p className="text-gray-600 text-lg">
+=======
+              <h2 className="text-3xl font-bold text-brand-maroon">Real-time Design Preview</h2>
+              <p className="text-brand-maroon text-lg">
+>>>>>>> 9fbb53d (self)
                 See your changes instantly with our live preview feature. Tweak colors, fonts, and layouts with immediate visual feedback.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
+<<<<<<< HEAD
                     <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+=======
+                    <div className="w-5 h-5 bg-brand-orange rounded-full flex items-center justify-center">
+>>>>>>> 9fbb53d (self)
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <p className="ml-3 text-gray-700">Drag-and-drop interface</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+=======
+                  <p className="ml-3 text-brand-maroon">Drag-and-drop interface</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-5 h-5 bg-brand-orange rounded-full flex items-center justify-center">
+>>>>>>> 9fbb53d (self)
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <p className="ml-3 text-gray-700">1000+ premium design elements</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+=======
+                  <p className="ml-3 text-brand-maroon">1000+ premium design elements</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-5 h-5 bg-brand-orange rounded-full flex items-center justify-center">
+>>>>>>> 9fbb53d (self)
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <p className="ml-3 text-gray-700">AI-powered design suggestions</p>
                 </li>
               </ul>
               <button className="mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl hover:opacity-90">
+=======
+                  <p className="ml-3 text-brand-maroon">AI-powered design suggestions</p>
+                </li>
+              </ul>
+              <button className="mt-6 bg-gradient-to-r from-brand-maroon to-brand-orange text-white px-8 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl hover:opacity-90">
+>>>>>>> 9fbb53d (self)
                 Try Design Studio
               </button>
             </div>

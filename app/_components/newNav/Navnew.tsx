@@ -27,6 +27,11 @@ function Navbar({ className }: { className?: string }) {
         return pathname.startsWith('/services');
       case 'contact':
         return pathname.startsWith('/contact');
+<<<<<<< HEAD
+=======
+      case 'courses':
+        return pathname.startsWith('/courses');
+>>>>>>> 9fbb53d (self)
       default:
         return false;
     }
@@ -86,12 +91,26 @@ function Navbar({ className }: { className?: string }) {
                 <HoveredLink href="/services/Graphics">Graphics Design</HoveredLink>
                 <HoveredLink href="/services/videoediting">Video Editing</HoveredLink>
               </div>
+<<<<<<< HEAD
             </div>
+=======
+                          </div>
+>>>>>>> 9fbb53d (self)
           </MenuItem>
 
           <MenuItem 
             setActive={setActive} 
             active={active} 
+<<<<<<< HEAD
+=======
+            item="Courses" 
+            isActive={isMenuItemActive('Courses') && active === null} 
+            href="/courses"
+          />
+          <MenuItem 
+            setActive={setActive} 
+            active={active} 
+>>>>>>> 9fbb53d (self)
             item="Contact" 
             isActive={isMenuItemActive('Contact') && active === null} 
             href="/contact"

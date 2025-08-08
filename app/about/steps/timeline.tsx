@@ -85,7 +85,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {/* Content right */}
                   <div className="flex w-full md:w-1/2 justify-start md:pl-10 order-1 md:order-2">
                     <div className="w-full text-left md:text-right">
+<<<<<<< HEAD
                       <h3 className="text-2xl md:text-4xl font-bold text-neutral-500 dark:text-neutral-500 mb-4">
+=======
+                      <h3 className="text-2xl md:text-4xl font-bold mb-4" style={{ color: '#5C0632' }}>
+>>>>>>> 9fbb53d (self)
                         {item.title}
                       </h3>
                       {item.content}
@@ -97,7 +101,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {/* Content left */}
                   <div className="flex w-full md:w-1/2 justify-end md:pr-10 order-2 md:order-1">
                     <div className="w-full text-right md:text-left">
+<<<<<<< HEAD
                       <h3 className="text-2xl md:text-4xl font-bold text-neutral-500 dark:text-neutral-500 mb-4">
+=======
+                      <h3 className="text-2xl md:text-4xl font-bold mb-4" style={{ color: '#5C0632' }}>
+>>>>>>> 9fbb53d (self)
                         {item.title}
                       </h3>
                       {item.content}

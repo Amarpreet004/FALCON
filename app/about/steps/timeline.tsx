@@ -51,11 +51,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {/* Center vertical line */}
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-20 px-2 md:px-0">
+        {/* Center vertical line (desktop only) */}
         <div
           style={{ height: height + "px" }}
-          className="absolute left-1/2 top-0 -translate-x-1/2 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%]  to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%]  to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{ height: springHeight, opacity: springOpacity }}
@@ -69,13 +69,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           return (
             <div
               key={index}
-              className="relative flex flex-col md:flex-row items-center justify-between pt-10 md:pt-40 md:gap-10"
+              className="relative flex flex-col md:flex-row items-start md:items-center justify-between pt-12 md:pt-40 md:gap-10 pl-8 md:pl-0"
             >
+              {/* Mobile left vertical guide & dot */}
+              <div className="md:hidden absolute left-2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#5C0632]/40 to-transparent" aria-hidden />
+              <div className="md:hidden absolute left-0 top-6 w-4 h-4 rounded-full bg-[#5C0632] ring-4 ring-white dark:ring-neutral-950" aria-hidden />
               {/* Timeline entry row */}
               {isEven ? (
                 <>
                   {/* Image left */}
-                  <div className="flex w-full md:w-1/2 justify-end md:pr-10 order-2 md:order-1">
+                  <div className="hidden md:flex w-full md:w-1/2 justify-end md:pr-10 order-2 md:order-1">
                     {item.image && (
                       <div className="w-full flex justify-end md:justify-end items-center">
                         {item.image}
@@ -104,7 +107,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     </div>
                   </div>
                   {/* Image right */}
-                  <div className="flex w-full md:w-1/2 justify-start md:pl-10 order-1 md:order-2">
+                  <div className="hidden md:flex w-full md:w-1/2 justify-start md:pl-10 order-1 md:order-2">
                     {item.image && (
                       <div className="w-full flex justify-start md:justify-start items-center">
                         {item.image}
@@ -114,7 +117,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </>
               )}
               {/* Center dot */}
-              <div className="absolute left-1/2 top-0 -translate-x-1/2 z-40 flex flex-col items-center">
+              <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 z-40 flex-col items-center">
                 <div className="h-10 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
                 </div>

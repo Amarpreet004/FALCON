@@ -61,18 +61,18 @@ function Navbar({ className }: { className?: string }) {
           />
 
           <MenuItem 
-            setActive={setActive}
-            active={active}
-            item="About"
-            isActive={isMenuItemActive('About') && active === null}
+            setActive={setActive} 
+            active={active} 
+            item="About" 
+            isActive={isMenuItemActive('About') && active === null} 
             href="/about"
           />
 
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Services"
-            isActive={isMenuItemActive('Services') && active === null}
+          <MenuItem 
+            setActive={setActive} 
+            active={active} 
+            item="Services" 
+            isActive={isMenuItemActive('Services') && active === null} 
             href="/services"
           >
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
@@ -91,19 +91,19 @@ function Navbar({ className }: { className?: string }) {
             </div>
           </MenuItem>
 
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Courses"
-            isActive={isMenuItemActive('Courses') && active === null}
+          <MenuItem 
+            setActive={setActive} 
+            active={active} 
+            item="Courses" 
+            isActive={isMenuItemActive('Courses') && active === null} 
             href="/courses"
           />
 
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Contact"
-            isActive={isMenuItemActive('Contact') && active === null}
+          <MenuItem 
+            setActive={setActive} 
+            active={active} 
+            item="Contact" 
+            isActive={isMenuItemActive('Contact') && active === null} 
             href="/contact"
           />
         </div>

@@ -5,15 +5,9 @@ import dynamic from "next/dynamic";
 const CountUp = dynamic(() => import("../../home/score/CountUp"), { ssr: false });
 
 const scores = [
-<<<<<<< HEAD
   { value: 7, suffix: "+", label: "Years Experience" },
   { value: 500, suffix: "+", label: "Projects Completed" },
   { value: 50, suffix: "+", label: "Team Members" },
-=======
-  { value: 2, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "+", label: "Projects Completed" },
-  { value: 10, suffix: "+", label: "Team Members" },
->>>>>>> 9fbb53d (self)
 ];
 
 export default function ScoreSection() {
@@ -26,13 +20,9 @@ export default function ScoreSection() {
               <span className="text-6xl md:text-7xl font-extrabold text-[#5C0632] mb-2">
                 <CountUp to={value} duration={1.5} className="inline" />{suffix}
               </span>
-<<<<<<< HEAD
               <span className="text-2xl text-[#3A3F4A] font-medium">
                 {label}
               </span>
-=======
-                  {label}
->>>>>>> 9fbb53d (self)
             </div>
           ))}
         </div>

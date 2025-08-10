@@ -65,17 +65,6 @@ const WHO_WE_ARE_ACCENT = "#FF5F1F";
 
 const whoStats = [
   {
-<<<<<<< HEAD
-    value: <><span className="text-3xl md:text-4xl font-bold" style={{ color: WHO_WE_ARE_TEXT }}><CountUp from={0} to={1500} duration={2} /></span><span className="text-2xl font-bold" style={{ color: WHO_WE_ARE_ACCENT }}>+</span></>,
-    label: "Project Done",
-  },
-  {
-    value: <><span className="text-3xl md:text-4xl font-bold" style={{ color: WHO_WE_ARE_TEXT }}><CountUp from={0} to={1000} duration={2} /></span><span className="text-2xl font-bold" style={{ color: WHO_WE_ARE_ACCENT }}>+</span></>,
-    label: "Happy Client",
-  },
-  {
-    value: <><span className="text-3xl md:text-4xl font-bold" style={{ color: WHO_WE_ARE_TEXT }}><CountUp from={0} to={100} duration={2} /></span><span className="text-2xl font-bold" style={{ color: WHO_WE_ARE_ACCENT }}>+</span></>,
-=======
     value: <><span className="text-3xl md:text-4xl font-bold" style={{ color: WHO_WE_ARE_TEXT }}><CountUp from={0} to={100} duration={2} /></span><span className="text-2xl font-bold" style={{ color: WHO_WE_ARE_ACCENT }}>+</span></>,
     label: "Project Done",
   },
@@ -85,7 +74,6 @@ const whoStats = [
   },
   {
     value: <><span className="text-3xl md:text-4xl font-bold" style={{ color: WHO_WE_ARE_TEXT }}><CountUp from={0} to={99} duration={2} /></span><span className="text-2xl font-bold" style={{ color: WHO_WE_ARE_ACCENT }}>%</span></>,
->>>>>>> 9fbb53d (self)
     label: "Employee",
   },
 ];
@@ -98,10 +86,7 @@ const WhoWeAre: React.FC = () => (
       </div>
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="mb-8">
-<<<<<<< HEAD
           <span className="inline-block px-4 py-2 rounded-full font-semibold text-sm mb-4" style={{ background: WHO_WE_ARE_ACCENT+"22", color: WHO_WE_ARE_ACCENT }}>@ Who we are?</span>
-=======
->>>>>>> 9fbb53d (self)
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4" style={{ color: WHO_WE_ARE_TEXT }}>Collaboration is the key to success.</h2>
           <p className="text-base md:text-lg mb-8" style={{ color: "#fff" }}>We work closely with our clients to understand their unique needs, goals, and challenges.</p>
         </div>

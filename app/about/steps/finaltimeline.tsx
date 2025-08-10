@@ -146,12 +146,12 @@ function TimelineDemo() {
                   />
 
                   <div
-                    className={`grid md:grid-cols-2 gap-10 items-center md:gap-16 ${
+                    className={`grid md:grid-cols-2 gap-10 items-start md:items-center md:gap-16 ${
                       isEven ? '' : 'md:[&>div:first-child]:order-2'
                     }`}
                   >
-                    {/* Image */}
-                    <div className="relative">
+                    {/* Image (hidden on small screens) */}
+                    <div className="relative hidden md:block">
                       <div
                         className={`relative rounded-3xl overflow-hidden shadow-xl ring-1 transition-all duration-500 ${
                           idx === activeIndex

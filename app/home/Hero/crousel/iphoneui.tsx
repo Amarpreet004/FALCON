@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 
 /**
@@ -59,13 +59,14 @@ const IphoneFrame: React.FC = () => {
       </svg>
       {/* Website preview fills the phone screen, starts below notch/status bar */}
       <div className="absolute z-0 w-full h-full" style={{ borderRadius: 60, overflow: 'hidden', top: 0, left: 0, paddingTop: 37 }}>
+        {/* Internal rotating preview to avoid external stale layout */}
         <iframe
-          src="https://www.falconwebsolution.com"
-          title="Falcon Web Solution"
-          className="w-full h-full min-h-[420px]"
+          src={"/preview/landing"}
+          title="Falcon Internal Preview"
+          className="w-full h-full min-h-[420px] bg-white"
           style={{ border: "none", borderRadius: 0 }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           loading="lazy"
+          sandbox="allow-same-origin allow-scripts"
         />
       </div>
     </div>
@@ -76,21 +77,40 @@ const IphoneFrame: React.FC = () => {
 const IphoneUI: React.FC = React.memo(() => {
   // Hide on mobile screens by rendering null, avoid hydration mismatch
   const [show, setShow] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const checkMobile = () => setShow(window.innerWidth > 768);
+    const checkMobile = () => setShow(window.innerWidth > 640); // show on tablets+, hide small phones
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  if (!show) return null;
+  // Lazy mount when in viewport
+  useEffect(() => {
+    if (!rootRef.current) return;
+    const el = rootRef.current;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { setMounted(true); obs.disconnect(); } });
+    }, { threshold: 0.15 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  if (!show) return null; // hide entirely on very small screens
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-transparent py-4 px-2">
-      <div className="flex items-center justify-center w-full">
-        <IphoneFrame />
-      </div>
+    <div ref={rootRef} className="w-full min-h-screen flex flex-col items-center justify-center bg-transparent py-4 px-2">
+      {mounted ? (
+        <div className="flex items-center justify-center w-full">
+          <IphoneFrame />
+        </div>
+      ) : (
+        <div className="w-full max-w-xs aspect-[320/650] flex items-center justify-center rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white text-xs text-neutral-400">
+          Loading preview...
+        </div>
+      )}
     </div>
   );
 });

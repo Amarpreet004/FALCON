@@ -18,6 +18,7 @@ export default function Footer() {
     { name: 'SEO Optimization', href: '/services/seo' },
     { name: 'Graphic Design', href: '/services/Graphics' },
     { name: 'Video Editing', href: '/services/videoediting' },
+    { name: 'Degital Marketing', href: '/services/videoediting' },
   ];
 
   const companyLinks: ServiceLink[] = [

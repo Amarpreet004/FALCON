@@ -18,7 +18,7 @@ export function TeamCard() {
       name: "Mayank Shivhare",
       role: "Web Developer",
       
-      image: "/mayank.jpg"
+      image: "/mayank.jpeg"
     },
     {
       name: "Krish Shivhare",

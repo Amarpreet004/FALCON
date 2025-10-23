@@ -30,7 +30,7 @@ export function ThreeDCardDemo() {
           <CardBody className="rounded-xl border overflow-hidden shadow-xl bg-gray-50 dark:bg-black border-black/[0.1] dark:border-white/[0.2] w-96 h-[22rem]">
             <CardItem translateZ={100} className="relative w-full h-full">
               <img
-                src={"/preet.JPG"}
+                src={"/founder.jpg"}
                 alt="card image"
                 className="w-full h-full object-cover"
               />

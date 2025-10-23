@@ -13,20 +13,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/Falcon.mov" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Contact our friendly team
           </h1>

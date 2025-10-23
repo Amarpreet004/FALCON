@@ -91,13 +91,7 @@ function Navbar({ className }: { className?: string }) {
             </div>
           </MenuItem>
 
-          <MenuItem 
-            setActive={setActive} 
-            active={active} 
-            item="Courses" 
-            isActive={isMenuItemActive('Courses') && active === null} 
-            href="/courses"
-          />
+          
 
           <MenuItem 
             setActive={setActive} 

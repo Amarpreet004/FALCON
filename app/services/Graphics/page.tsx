@@ -1,5 +1,6 @@
 import GraphicsHero from "./hero";
 import ThreeDPortfolio from "./ThreeDPortfolio";
+import Services from "./Services";
 export default function Page() {
   return (
     <>
@@ -8,6 +9,9 @@ export default function Page() {
       </div>
       <div className="mt-8">
         <ThreeDPortfolio />
+      </div>
+      <div className="mt-8">
+        <Services />
       </div>
     </>
   )

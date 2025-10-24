@@ -38,7 +38,7 @@ const REELS_VIDEOS = [
     poster: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
   },
   {
-    video: "https://www.instagram.com/reel/DN4u9CoDbWr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    video: "https://www.instagram.com/reel/DHn1YN7ShJX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     poster: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
   },
   {
@@ -49,7 +49,19 @@ const REELS_VIDEOS = [
 
 const AD_VIDEOS = [
   {
-    video: "https://www.w3schools.com/html/movie.mp4",
+    video: "https://www.instagram.com/reel/DObjBDTj0Vg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    video: "https://www.instagram.com/reel/DHlpkE6JFKr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    video: "https://www.instagram.com/reel/DI6kkZOOcU3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    video: "https://www.instagram.com/reel/DM5CFzHpzn_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
   },
 ];
@@ -98,7 +110,12 @@ export default function VideoEditingGallery() {
             <div
               key={idx}
               className={`relative rounded-xl overflow-hidden border-2 border-[#660033] group shadow-lg transition-all duration-300 bg-[#660033]/10 flex items-center justify-center`}
-              style={activeTab === 1 ? { aspectRatio: '9/16' } : { height: 'auto', minHeight: 200, maxHeight: 400 }}
+              style={
+  activeTab === 1 || activeTab === 2
+    ? { aspectRatio: '9/16' }
+    : { height: 'auto', minHeight: 200, maxHeight: 400 }
+}
+
             >
               {isYouTube ? (
                 <iframe

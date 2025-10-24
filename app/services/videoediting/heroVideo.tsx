@@ -9,11 +9,11 @@ function VideoHeroSection() {
   const [activeTool, setActiveTool] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const tools = [
-    { icon: <Code size={20} />, name: "Clean Code", color: "text-green-500", bg: "bg-green-100" },
-    { icon: <Palette size={20} />, name: "UI Design", color: "text-blue-500", bg: "bg-blue-100" },
-    { icon: <Smartphone size={20} />, name: "Responsive", color: "text-purple-500", bg: "bg-purple-100" },
-    { icon: <Globe size={20} />, name: "SEO Optimized", color: "text-cyan-500", bg: "bg-cyan-100" },
-    { icon: <BarChart2 size={20} />, name: "Analytics", color: "text-yellow-500", bg: "bg-yellow-100" }
+    { icon: <Code size={20} />, name: "Clean Code", color: "#660033", bg: "#660033" },
+    { icon: <Palette size={20} />, name: "UI Design", color: "#660033", bg: "#660033" },
+    { icon: <Smartphone size={20} />, name: "Responsive", color: "#660033", bg: "#660033" },
+    { icon: <Globe size={20} />, name: "SEO Optimized", color: "#660033", bg: "#660033" },
+    { icon: <BarChart2 size={20} />, name: "Analytics", color: "#660033", bg: "#660033" }
   ];
 
   useEffect(() => {
@@ -79,28 +79,25 @@ function VideoHeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-            Get More Leads with <span className="text-green-500">Pro Video Content</span>
+            Get More Leads with <span className="text-[#660033]">Pro Video Content</span>
             <span className="relative inline-block ml-2">
-              <span className="text-blue-500 relative z-10">for Your Brand</span>
+              <span className="text-[#660033] relative z-10">For Your Brand</span>
               <Sparkles className="absolute -top-4 -right-6 w-6 h-6 text-yellow-400 animate-spin-slow" />
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
+          <p className="text-black text-lg mb-8 max-w-lg leading-relaxed">
             We help entrepreneurs and businesses grow with done-for-you, organic video content systems built to generate leads on autopilot.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button className="px-6 py-3.5 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-green-400">
+            <button className="px-6 py-3.5 bg-gradient-to-r from-[#660033] to-[#660033] text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-green-400">
               <Play className="mr-2 w-4 h-4 group-hover:scale-125 transition-transform" />
               <span className="font-medium">Book A Call</span>
             </button>
-            <button className="px-6 py-3.5 bg-white/90 backdrop-blur-sm text-blue-700 rounded-lg border border-blue-200 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400">
-              <Phone className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span className="font-medium">View Portfolio</span>
-            </button>
+            
           </div>
 
           {/* Tools Carousel */}

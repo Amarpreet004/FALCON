@@ -1,18 +1,22 @@
+"use client"
 import GraphicsHero from "./hero";
-import ThreeDPortfolio from "./ThreeDPortfolio";
-import Services from "./Services";
+import DomeGallery from "./DomeGallery";
+import WhoAreYou from "./graphictype";
+
 export default function Page() {
   return (
     <>
-      <div className="mt-8">
+    
+      <div className="mt-14">
         <GraphicsHero />
       </div>
       <div className="mt-8">
-        <ThreeDPortfolio />
+        <WhoAreYou />
       </div>
-      <div className="mt-8">
-        <Services />
+      <div style={{ width: '100vw', height: '100vh' }}>
+        <DomeGallery />
       </div>
+      
     </>
   )
 }

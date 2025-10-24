@@ -73,22 +73,22 @@ function VideoHeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm mb-6 border border-gray-100 group hover:shadow-md transition-shadow duration-300">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-            <span className="text-sm font-medium text-gray-700">We're accepting new projects</span>
+            <span className="text-sm font-medium text-gray-700">Transform Your Footage into Powerful Stories</span>
             <ChevronRight className="ml-2 w-4 h-4 text-blue-500 group-hover:translate-x-1 transition-transform duration-200" />
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-            Get More Leads with <span className="text-[#660033]">Pro Video Content</span>
+            Professional Video Editing Services <span className="text-[#660033]">for Brands &</span>
             <span className="relative inline-block ml-2">
-              <span className="text-[#660033] relative z-10">For Your Brand</span>
+              <span className="text-[#660033] relative z-10"> Creators</span>
               <Sparkles className="absolute -top-4 -right-6 w-6 h-6 text-yellow-400 animate-spin-slow" />
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-black text-lg mb-8 max-w-lg leading-relaxed">
-            We help entrepreneurs and businesses grow with done-for-you, organic video content systems built to generate leads on autopilot.
+            At Falcon Web Solution, we create stunning and impactful videos that make your brand stand out and drive real results.
           </p>
 
           {/* CTA Buttons */}

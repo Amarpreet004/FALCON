@@ -8,49 +8,43 @@ const services = [
 			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="#fff" strokeWidth="4" opacity="0.5" /><path d="M12 20c2-4 8-8 16-8" stroke="#fff" strokeWidth="3" strokeLinecap="round" /></svg>
 		),
 		title: "YouTube Video Editing",
-		desc: "From raw footage to fully polished videos — intros, transitions, captions, and callouts that keep viewers watching."
+		desc: "Turn your raw footage into engaging YouTube videos with smooth transitions, captions, intros, and hooks that keep viewers watching till the end."
 	},
 	{
 		icon: (
 			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/><rect x="22" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="8" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="22" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/></svg>
 		),
 		title: "Social Media Reels & Shorts",
-		desc: "High-impact edits for Instagram, TikTok, and YouTube Shorts — designed to grab attention fast and boost engagement."
+		desc: "Create viral-ready edits for Instagram, TikTok, and YouTube Shorts. Designed to grab attention fast, boost engagement, and grow your audience organically."
 	},
 	{
 		icon: (
 			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="8" fill="#fff" opacity="0.5"/><circle cx="28" cy="12" r="6" fill="#fff" opacity="0.7"/><rect x="20" y="20" width="12" height="12" rx="6" fill="#fff" opacity="0.7"/></svg>
 		),
 		title: "Corporate & Promo Videos",
-		desc: "Clean, branded video edits for presentations, product launches, or marketing campaigns that reflect your professionalism."
+		desc: "Professional, branded edits for corporate presentations, product launches, or marketing campaigns — crafted to reflect your brand’s quality and credibility."
 	},
 	{
 		icon: (
 			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="24" width="10" height="8" rx="3" fill="#fff" opacity="0.7"/><rect x="22" y="8" width="10" height="24" rx="5" fill="#fff" opacity="0.4"/></svg>
 		),
 		title: "Podcast & Interview Edits",
-		desc: "Multi-cam syncing, noise removal, cutdowns, and highlights — optimized for both video and audio platforms."
+		desc: "Clean, distraction-free editing that enhances clarity, flow, and audience engagement for podcasts, interviews, or talk shows."
 	},
 	{
 		icon: (
 			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="28" rx="12" ry="6" fill="#fff" opacity="0.5"/><rect x="10" y="8" width="20" height="12" rx="6" fill="#fff" opacity="0.7"/></svg>
 		),
 		title: "Ad & Sales Video Editing",
-		desc: "Performance-focused editing for Facebook, YouTube, and Google ads — built to convert with strong hooks and CTAs."
+		desc: "High-performing ad edits tailored for Facebook, YouTube, and Instagram — built to convert viewers into customers."
 	},
-	{
-		icon: (
-			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><g stroke="#fff" strokeWidth="3" strokeLinecap="round"><line x1="20" y1="5" x2="20" y2="35"/><line x1="5" y1="20" x2="35" y2="20"/><line x1="10" y1="10" x2="30" y2="30"/><line x1="30" y1="10" x2="10" y2="30"/></g></svg>
-		),
-		title: "Course & Tutorial Editing",
-		desc: "Structured, distraction-free edits that make learning smooth and professional for your students or audience."
-	},
+	
 ];
 
 export default function VideoCoreServices() {
 	return (
 		<section className="w-full bg-white py-16 px-4 flex flex-col items-center">
-			<h2 className="text-4xl md:text-5xl font-bold text-[#660033] mb-12 text-center">Our Core Service</h2>
+			<h2 className="text-4xl md:text-5xl font-bold text-[#660033] mb-12 text-center">Our Video Editing Services</h2>
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
 				{/* Service Cards */}
 				{services.slice(0, 3).map((service, idx) => (

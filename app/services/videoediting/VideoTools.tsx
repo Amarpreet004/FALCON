@@ -8,25 +8,25 @@ const stats = [
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M12 20c2-4 8-8 16-8" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" /></svg>
     ),
-    value: "200%",
+    value: "250%",
     label: "More Engagement",
-    desc: "Every video is crafted with a clear marketing goal."
+    desc: "Every video is designed with a clear strategy to keep viewers hooked till the end."
   },
   {
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M10 20c4-8 16-8 20 0" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" /></svg>
     ),
-    value: "10%",
+    value: "80%",
     label: "More Reach",
-    desc: "Tailored for YouTube, Reels, TikTok, and more."
+    desc: "Optimized for YouTube, Instagram Reels, TikTok, and all major platforms."
   },
   {
     icon: (
       <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M16 24h8v-8h-8v8z" stroke="#fff" strokeWidth="2.5" strokeLinejoin="round" /></svg>
     ),
-    value: "55%",
+    value: "60%",
     label: "More Leads",
-    desc: "From raw clips to ready-to-post edits."
+    desc: "From raw clips to ready-to-post, marketing-ready edits that drive sales."
   }
 ];
 
@@ -50,20 +50,21 @@ export default function VideoTools() {
               </div>
               {/* Divider line, aligned with icon */}
               {i < stats.length - 1 && (
-                <div className="mt-6 ml-[4.5rem] md:ml-[4.5rem] h-0.5 w-full max-w-[90%] bg-white/30" />
+                <div className="mt-6 ml-[4.5rem] md:ml-[4.5rem] h-0.5 w-full max-w-[80%] bg-white/30" />
               )}
             </div>
           ))}
         </div>
         {/* Right: Text & CTA */}
         <div className="flex-1 flex flex-col items-center md:items-start animate-fade-in-right">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-center md:text-left">We are Vidora</h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left leading-snug">High-Impact Video Content. Built to Grow Your Brand.</h3>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-center md:text-left">We Are Falcon Web Solution</h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left leading-snug">Professional Video Editing. Designed to Grow Your Brand.</h3>
           <p className="text-white/90 text-base md:text-lg mb-6 max-w-lg text-center md:text-left">
-            At Vidora, we create scroll-stopping videos that help entrepreneurs and businesses grow their audience, boost engagement, and generate leads on autopilot.
+            At Falcon Web Solution, we craft high-quality, story-driven videos that help brands, creators, and businesses capture attention, boost engagement, and grow faster online.
           </p>
           <p className="text-white/70 text-base md:text-lg mb-8 max-w-lg text-center md:text-left">
-            We blend storytelling, strategy, and speed to deliver done-for-you content systems that perform so you can stay focused on running your business while we handle the editing magic behind the scenes.
+            We combine strategy, creativity, and precision editing to deliver videos that not only look amazing — but actually perform. You focus on your business, while we handle the editing magic that turns every clip into a conversion tool.
+
           </p>
           <button className="px-7 py-3 bg-white text-[#660033] font-semibold rounded-lg shadow-lg hover:bg-white/90 transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white">
             Contact us <ArrowUpRight className="w-5 h-5" />

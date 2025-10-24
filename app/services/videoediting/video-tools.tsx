@@ -10,10 +10,8 @@ const services = [
 		desc: "From raw footage to fully polished videos — intros, transitions, captions, and callouts that keep viewers watching."
 	},
 	{
-		icon: (
-			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/><rect x="22" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="8" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="22" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/></svg>
-		),
-		title: "Social Media Reels & Shorts",
+		icon: <Entypo name="instagram" size={40} color="#660033" />,
+        title: "Social Media Reels & Shorts",
 		desc: "High-impact edits for Instagram, TikTok, and YouTube Shorts — designed to grab attention fast and boost engagement."
 	},
 	{

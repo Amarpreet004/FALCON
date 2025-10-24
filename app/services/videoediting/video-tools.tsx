@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { Entypo } from "@expo/vector-icons";
+import { AiOutlinePlayCircle } from 'react-icons/ai'; // AntDesign equivalent
+import { Entypo } from '@expo/vector-icons'; // Entypo icons
 
 const services = [
 	{

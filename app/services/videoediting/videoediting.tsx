@@ -1,86 +1,87 @@
+"use client";
+import React, { useState } from "react";
 
+const TABS = [
+  { label: "YouTube Videos" },
+  { label: "SaaS Videos" },
+  { label: "Shorts" },
+  { label: "Ad Creatives & VSL" },
+];
 
-'use client';
+// (removed old VIDEOS array, only new one below)
+const VIDEOS = [
+  [
+    {
+      video: "https://www.w3schools.com/html/mov_bbb.mp4",
+      poster: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwOjuiwxVPfLxzcYNR8bWB7AXmHo541u0nMpwV",
+    },
+    {
+      video: "https://www.w3schools.com/html/movie.mp4",
+      poster: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      video: "https://www.w3schools.com/html/mov_bbb.mp4",
+      poster: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      video: "https://www.w3schools.com/html/movie.mp4",
+      poster: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
+  // Add more arrays for other tabs if needed
+];
 
-import React from 'react';
+export default function VideoEditingGallery() {
+  const [activeTab, setActiveTab] = useState(0);
+  const videos = VIDEOS[activeTab] || VIDEOS[0];
 
-export default function VideoEditing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
-          Video Editing Services
-        </h1>
-        <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
-          Transform your raw footage into cinematic brilliance with our expert editing tools and creative vision.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {[
-            {
-              name: "Adobe Premiere Pro",
-              description: "Professional video editing software",
-              image: "https://w7.pngwing.com/pngs/517/344/png-transparent-adobe-premiere-pro-premiere-pro-multimedia-software-aplication-app-adobe-family-software-icon.png"
-            },
-            {
-              name: "Adobe After Effects",
-              description: "Motion graphics and visual effects",
-              image: "https://w7.pngwing.com/pngs/384/735/png-transparent-adobe-after-effects-computer-icons-adobe-creative-cloud-adobe-animate-animation-purple-violet-logo.png"
-            },
-            {
-              name: "Final Cut Pro",
-              description: "Professional video editing for Mac",
-              image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSvbAoTpB4_kaLqaP2vMACW5ZyXFrZleH0g&s"
-            },
-            {
-              name: "Blender",
-              description: "3D modeling and animation",
-              image: "https://download.blender.org/branding/community/blender_community_badge_orange.png"
-            }
-          ].map((tool, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200">
-              <div className="p-6 flex flex-col items-center text-center">
-                <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 rounded-full p-4 mb-5 shadow-inner">
-                  <img src={tool.image} alt={tool.name} className="w-12 h-12 object-contain" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">{tool.name}</h3>
-                <p className="text-gray-600 mt-2">{tool.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-20 bg-white p-8 rounded-2xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Video Editing Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Planning & Storyboarding",
-                description: "We start by understanding your vision and creating a detailed storyboard."
-              },
-              {
-                step: "2",
-                title: "Editing & Effects",
-                description: "Our experts edit your footage and add stunning visual effects."
-              },
-              {
-                step: "3",
-                title: "Review & Delivery",
-                description: "We review the final product with you and deliver in your preferred format."
-              }
-            ].map((process, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                  {process.step}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{process.title}</h3>
-                <p className="text-gray-600">{process.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    <section className="w-full min-h-[80vh] bg-white py-16 px-4 flex flex-col items-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#660033] mb-8 text-center">Our Latest Work</h2>
+      {/* Tabs */}
+      <div className="flex gap-4 mb-10 flex-wrap justify-center">
+        {TABS.map((tab, idx) => (
+          <button
+            key={tab.label}
+            onClick={() => setActiveTab(idx)}
+            className={`px-5 py-2 rounded-lg font-medium transition-all border-2 ${activeTab === idx ? 'border-[#660033] bg-[#660033] text-white shadow-lg' : 'border-[#660033] text-[#660033] bg-transparent hover:bg-[#660033]/10'} focus:outline-none`}
+            style={{ minWidth: 140 }}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
-    </div>
+      {/* Video Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full max-w-5xl">
+        {videos.map((video, idx) => (
+          <div
+            key={idx}
+            className={`relative rounded-xl overflow-hidden border-2 border-[#660033] group shadow-lg transition-all duration-300 bg-[#660033]/10`}
+            style={{ aspectRatio: '16/9' }}
+          >
+            <video
+              src={video.video}
+              poster={video.poster}
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            {/* Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-[#660033]">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="19" cy="19" r="19" fill="#660033" fillOpacity="0.95" />
+                  <polygon points="15,12 28,19 15,26" fill="#fff" />
+                </svg>
+              </span>
+            </div>
+            {/* Animated Border Glow */}
+            <div className={`absolute inset-0 rounded-xl pointer-events-none group-hover:shadow-[0_0_0_4px_rgba(102,0,51,0.15)] transition-all duration-300`} />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

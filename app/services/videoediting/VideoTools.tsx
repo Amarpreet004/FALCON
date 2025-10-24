@@ -1,68 +1,96 @@
 "use client";
 
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
-interface ToolCard {
-  name: string;
-  description: string;
-  image: string;
-}
-
-const webDevTools: ToolCard[] = [
+const stats = [
   {
-    name: "Adobe Premiere Pro",
-    description: "The React framework for production",
-    image: "https://w7.pngwing.com/pngs/517/344/png-transparent-adobe-premiere-pro-premiere-pro-multimedia-software-aplication-app-adobe-family-software-icon.png",
+    icon: (
+      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M12 20c2-4 8-8 16-8" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" /></svg>
+    ),
+    value: "200%",
+    label: "More Engagement",
+    desc: "Every video is crafted with a clear marketing goal."
   },
   {
-    name: "Adobe After Effects",
-    description: "Utility-first CSS framework",
-    image: "https://w7.pngwing.com/pngs/384/735/png-transparent-adobe-after-effects-computer-icons-adobe-creative-cloud-adobe-animate-animation-purple-violet-logo.png",
+    icon: (
+      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M10 20c4-8 16-8 20 0" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" /></svg>
+    ),
+    value: "10%",
+    label: "More Reach",
+    desc: "Tailored for YouTube, Reels, TikTok, and more."
   },
   {
-    name: "Final Cut Pro",
-    description: "Typed JavaScript superset",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSvbAoTpB4_kaLqaP2vMACW5ZyXFrZleH0g&s",
-  },
-  {
-    name: "Blender",
-    description: "Modern database toolkit",
-    image: "https://download.blender.org/branding/community/blender_community_badge_orange.png",
-  },
+    icon: (
+      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" stroke="#fff" strokeWidth="3" opacity="0.7" /><path d="M16 24h8v-8h-8v8z" stroke="#fff" strokeWidth="2.5" strokeLinejoin="round" /></svg>
+    ),
+    value: "55%",
+    label: "More Leads",
+    desc: "From raw clips to ready-to-post edits."
+  }
 ];
 
-const ToolCard: React.FC<{ tool: ToolCard }> = ({ tool }) => {
+export default function VideoTools() {
   return (
-    <div className="group relative bg-white dark:bg-gray-800 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 transform ">
-      <div className="p-6 flex flex-col items-center text-center relative z-10">
-        <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-full p-4 mb-5 shadow-inner">
-          <img src={tool.image} alt={tool.name} className="w-12 h-12 object-contain" />
-        </div>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{tool.name}</h3>
-      </div>
-    </div>
-  );
-};
-
-export default function VideoToolsCards() {
-  return (
-    <div className=" bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-16 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Modern Video Editing Tools
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-           Innovative UI/UX solutions for crafting seamless and visually compelling <br/>digital experiences.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {webDevTools.map((tool, index) => (
-            <ToolCard key={index} tool={tool} />
+  <section className="relative w-[96%] mx-auto rounded-3xl min-h-[70vh] bg-[#660033] py-16 px-4 md:px-0 flex items-center justify-center overflow-hidden">
+      <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-0">
+        {/* Left: Stats */}
+        <div className="flex-1 flex flex-col gap-12 animate-fade-in-left relative">
+          {stats.map((stat, i) => (
+            <div key={i} className="flex flex-col">
+              <div className="flex items-start gap-6 group">
+                <div className="shrink-0">{stat.icon}</div>
+                <div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">{stat.value}</span>
+                    <span className="text-lg text-white/80 font-medium">{stat.label}</span>
+                  </div>
+                  <p className="text-white/70 text-base md:text-lg mt-1">{stat.desc}</p>
+                </div>
+              </div>
+              {/* Divider line, aligned with icon */}
+              {i < stats.length - 1 && (
+                <div className="mt-6 ml-[4.5rem] md:ml-[4.5rem] h-0.5 w-full max-w-[90%] bg-white/30" />
+              )}
+            </div>
           ))}
         </div>
+        {/* Right: Text & CTA */}
+        <div className="flex-1 flex flex-col items-center md:items-start animate-fade-in-right">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-center md:text-left">We are Vidora</h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left leading-snug">High-Impact Video Content. Built to Grow Your Brand.</h3>
+          <p className="text-white/90 text-base md:text-lg mb-6 max-w-lg text-center md:text-left">
+            At Vidora, we create scroll-stopping videos that help entrepreneurs and businesses grow their audience, boost engagement, and generate leads on autopilot.
+          </p>
+          <p className="text-white/70 text-base md:text-lg mb-8 max-w-lg text-center md:text-left">
+            We blend storytelling, strategy, and speed to deliver done-for-you content systems that perform so you can stay focused on running your business while we handle the editing magic behind the scenes.
+          </p>
+          <button className="px-7 py-3 bg-white text-[#660033] font-semibold rounded-lg shadow-lg hover:bg-white/90 transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white">
+            Contact us <ArrowUpRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
-    </div>
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes fade-in-left {
+          0% { opacity: 0; transform: translateX(-40px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fade-in-right {
+          0% { opacity: 0; transform: translateX(40px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes divider {
+          0% { width: 0; opacity: 0; }
+          60% { opacity: 1; }
+          100% { width: 66.666667%; opacity: 1; }
+        }
+        .animate-fade-in-left { animation: fade-in-left 1.2s cubic-bezier(.4,0,.2,1) both; }
+        .animate-fade-in-right { animation: fade-in-right 1.2s cubic-bezier(.4,0,.2,1) both; }
+        .animate-divider { animation: divider 1.2s cubic-bezier(.4,0,.2,1) both; }
+        .animate-divider.delay-200 { animation-delay: 0.2s; }
+        .animate-divider.delay-400 { animation-delay: 0.4s; }
+      `}</style>
+    </section>
   );
 }

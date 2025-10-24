@@ -80,11 +80,11 @@ function Navbar({ className }: { className?: string }) {
                 <h4 className="text-lg font-bold mb-2 text-black dark:text-white">Development</h4>
                 <HoveredLink href="/services/web-development">Web Development</HoveredLink>
                 <HoveredLink href="/services/mobile-apps">Mobile Apps</HoveredLink>
-                <HoveredLink href="/services/ui-ux-design">UI/UX Design</HoveredLink>
+                
               </div>
               <div className="flex flex-col space-y-4">
                 <h4 className="text-lg font-bold mb-2 text-black dark:text-white">Marketing</h4>
-                <HoveredLink href="/services/seo">SEO Services</HoveredLink>
+                <HoveredLink href="/services/seo">SEO & Digital Marketing</HoveredLink>
                 <HoveredLink href="/services/Graphics">Graphics Design</HoveredLink>
                 <HoveredLink href="/services/videoediting">Video Editing</HoveredLink>
               </div>

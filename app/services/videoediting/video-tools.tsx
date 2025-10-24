@@ -1,17 +1,20 @@
 "use client";
 import React from "react";
-import { AiOutlinePlayCircle } from 'react-icons/ai'; // AntDesign equivalent
-import { Entypo } from '@expo/vector-icons'; // Entypo icons
+
 
 const services = [
 	{
-		icon: <Entypo name="youtube" size={40} color="#660033" />,
-        title: "YouTube Video Editing",
+		icon: (
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="#fff" strokeWidth="4" opacity="0.5" /><path d="M12 20c2-4 8-8 16-8" stroke="#fff" strokeWidth="3" strokeLinecap="round" /></svg>
+		),
+		title: "YouTube Video Editing",
 		desc: "From raw footage to fully polished videos — intros, transitions, captions, and callouts that keep viewers watching."
 	},
 	{
-		icon: <Entypo name="instagram" size={40} color="#660033" />,
-        title: "Social Media Reels & Shorts",
+		icon: (
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/><rect x="22" y="8" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="8" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.4"/><rect x="22" y="22" width="10" height="10" rx="3" fill="#fff" opacity="0.7"/></svg>
+		),
+		title: "Social Media Reels & Shorts",
 		desc: "High-impact edits for Instagram, TikTok, and YouTube Shorts — designed to grab attention fast and boost engagement."
 	},
 	{

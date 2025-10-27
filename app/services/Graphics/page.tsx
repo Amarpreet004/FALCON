@@ -3,6 +3,7 @@ import GraphicsHero from "./hero";
 import DomeGallery from "./DomeGallery";
 import WhoAreYou from "./graphictype";
 import WebDevToolsCards from "./graphic-tools";
+import title from "./title";
 export default function Page() {
   return (
     <>
@@ -15,6 +16,9 @@ export default function Page() {
       </div>
       <div className="mt-8">
         <WhoAreYou />
+      </div>
+      <div className="mb-8">
+        {title()}
       </div>
       <div style={{ width: '100vw', height: '100vh' }}>
         <DomeGallery />

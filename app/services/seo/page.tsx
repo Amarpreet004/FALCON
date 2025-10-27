@@ -1,2 +1,16 @@
-const SEO = () => <div>SEO Optimization Service</div>;
-export default SEO;
+"use client"
+import Hero from "./hero";
+
+
+export default function Page() {
+  return (
+    <>
+    
+      <div className="mt-14">
+        <Hero />
+      </div>
+      
+      
+    </>
+  )
+}

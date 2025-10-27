@@ -2,7 +2,10 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Sparkles, Zap, Layers, Database, Code, Palette } from "lucide-react";
+import { Sparkles, Zap, Layers, Database, Code, Palette ,Film,
+  Scissors,
+  PenTool,
+  Sparkle,} from "lucide-react";
 
 interface ToolCard {
   name: string;
@@ -13,76 +16,52 @@ interface ToolCard {
 
   const webDevTools: ToolCard[] = [
   {
-    name: "Next.js",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw0_yhGEmhIF8QjL7poBJqowjSlIw0kKKOJA&s",
-    color: "from-gray-600 to-black",
-    icon: <Layers className="w-4 h-4" />
+    name: "Adobe Premiere Pro",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
+    color: "from-purple-600 to-indigo-900",
+    icon: <Film className="w-4 h-4" />,
   },
   {
-    name: "Tailwind CSS",
-    image: "https://images.seeklogo.com/logo-png/43/2/tailwind-css-logo-png_seeklogo-434090.png",
-    color: "from-gray-400 to-gray-600",
-    icon: <Palette className="w-4 h-4" />
+  name: "Final Cut Pro",
+  image: "/final.png",
+  color: "from-gray-500 to-black",
+  icon: <Scissors className="w-4 h-4" />,
+},
+  {
+    name: "DaVinci Resolve",
+    image:
+      "/DaVinci_Resolve_Studio.png",
+    color: "from-sky-600 to-blue-900",
+    icon: <Film className="w-5 h-4" />,
   },
   {
-    name: "React.js",
-    image: "https://images.seeklogo.com/logo-png/48/1/react-logo-png_seeklogo-480571.png",
-    color: "from-white to-gray-400",
-    icon: <Code className="w-4 h-4" />
-  },
-  {
-    name: "Bootstrap",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png?20210507000024",
-    color: "from-gray-500 to-gray-700",
-    icon: <Sparkles className="w-4 h-4" />
-  },
-  {
-    name: "Javascript",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/027/127/463/small_2x/javascript-logo-javascript-icon-transparent-free-png.png",
-    color: "from-gray-300 to-gray-500",
-    icon: <Zap className="w-4 h-4" />
-  },
-  {
-    name: "MongoDB",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChJIoeZ5_EvvIHB3P8aWGTQp3WufGdm5QCQ&s",
-    color: "from-gray-600 to-black",
-    icon: <Database className="w-4 h-4" />
-  },
-  {
-    name: "Express.js",
-    image: "https://www.manektech.com/storage/developer/1646733543.webp",
+    name: "CapCut",
+    image:
+      "/capcut.jpeg",
     color: "from-gray-700 to-gray-900",
-    icon: <Layers className="w-4 h-4" />
+    icon: <Scissors className="w-4 h-4" />,
   },
   {
-    name: "Node.js",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-    color: "from-gray-500 to-gray-800",
-    icon: <Code className="w-4 h-4" />
+    name: "Filmora",
+    image:
+      "/filmora.png",
+    color: "from-teal-500 to-green-700",
+    icon: <Film className="w-4 h-4" />,
   },
   {
-    name: "Three.js",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTChJIoeZ5_EvvIHB3P8aWGTQp3WufGdm5QCQ&s",
-    color: "from-gray-600 to-black",
-    icon: <Database className="w-4 h-4" />
+    name: "Canva",
+    image:
+      "/canva-icon-logo-symbol-free-png Background Removed.png",
+    color: "from-cyan-400 to-blue-600",
+    icon: <PenTool className="w-4 h-4" />,
   },
   {
-    name: "WordPress",
-    image: "https://www.manektech.com/storage/developer/1646733543.webp",
-    color: "from-gray-700 to-gray-900",
-    icon: <Layers className="w-4 h-4" />
-  },
-  {
-    name: "Sopify",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-    color: "from-gray-500 to-gray-800",
-    icon: <Code className="w-4 h-4" />
-  },
-   {
-    name: "Sopify",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-    color: "from-gray-500 to-gray-800",
-    icon: <Code className="w-4 h-4" />
+    name: "Adobe After Effects",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg",
+    color: "from-violet-600 to-indigo-900",
+    icon: <Sparkle className="w-4 h-4" />,
   },
 ];const ToolCard: React.FC<{ tool: ToolCard; index: number }> = ({ tool, index }) => {
   return (
@@ -189,17 +168,7 @@ export default function WebDevToolsCards() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <motion.button
-            className="group relative px-8 py-4 bg-[#5C0632] text-white font-semibold rounded-full overflow-hidden shadow-lg shadow-[#5C0632]/25"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowThirdCard((prev) => !prev)}
-          >
-            <span className="relative flex items-center gap-2">
-              <Zap className="w-5 h-5" />
-              {showThirdCard ? 'show less' : 'show more'}
-            </span>
-          </motion.button>
+          
         </motion.div>
       </div>
     </div>

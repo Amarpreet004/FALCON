@@ -3,6 +3,7 @@ import VideoHeroSection from './heroVideo'
 import VideoTools from './VideoTools'
 import VideoEditingGallery from './videoediting'
 import VideoCoreServices from './video-tools'
+import WebDevToolsCards from './tool'
 
 export default function Page() {
   return (
@@ -11,10 +12,14 @@ export default function Page() {
         <VideoHeroSection />
       </div>
       <div className="mt-8">
-        <VideoTools />
+        <WebDevToolsCards/>
+      </div>
+      <div className="mt-8">
+       <VideoEditingGallery />
       </div>
       <div className="mb-8">
-        <VideoEditingGallery />
+        
+        <VideoTools />
       </div>
       <div className="mb-8">
         <VideoCoreServices />

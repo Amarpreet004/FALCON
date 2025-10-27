@@ -139,8 +139,8 @@ export default function WebDevToolsCards() {
           </motion.div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-[#5C0632]">Modern Development</span>{" "}
-            <span className="text-[#5C0632]">Tools</span>
+            <span className="text-[#5C0632]">Modern Designing </span>{" "}
+            <span className="text-[#5C0632]">Software</span>
           </h1>
           
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">

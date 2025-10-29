@@ -10,7 +10,7 @@ export default function MobileAppHero() {
 					PLAN YOUR <br />
 					<span className="italic font-normal">ESCAPE</span>
 				</h1>
-				<div className="mt-10 bg-[#662046] rounded-3xl p-10 md:p-16 w-[90vw] min-h-[420px] md:min-h-[490px] mx-auto">
+				<div className="mt-10 bg-[#5C0632] rounded-3xl p-10 md:p-16 w-[90vw] min-h-[420px] md:min-h-[490px] mx-auto">
 					<p className="text-lg md:text-xl text-[#fff] mb-6">
 						We have the largest selection of unique tours. <br />
 						Try our easy and quick tour selection for any request. <br /> 24-hour support is always happy to answer all your questions.

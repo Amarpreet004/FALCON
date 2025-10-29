@@ -92,25 +92,25 @@ const TripleIphoneFrame: React.FC = () => {
 							className="bg-white rounded-2xl shadow-sm border border-neutral-100 px-7 py-8 max-w-md w-[300px] flex flex-col items-start justify-center"
 							style={{ minWidth: 220 }}
 						>
-							<h1 className="text-3xl md:text-4xl font-bold text-black leading-tight mb-3">IMMENSE TOURS<br />SELECTION</h1>
+							<h1 className="text-3xl md:text-4xl font-bold text-black leading-tight mb-3">BUILD APPS <br />THAT INSPIRE ACTION</h1>
 							<p className="italic text-xl md:text-2xl text-black mb-6" style={{ fontFamily: 'inherit' }}>
-								WE TURN YOUR DREAMS<br />INTO UNFORGETTABLE TRAVEL
+								Transform your vision into beautifully designed, <br />high-performance mobile apps built with modern technologies.
 							</p>
 							<button className="px-5 py-2 border border-black rounded-full text-black text-base font-medium hover:bg-black hover:text-white transition-colors">
-								View reviews
+								Contact us 
 							</button>
 						</div>
 						{/* iPhones on the right */}
 												<div className="relative flex flex-row items-end justify-end gap-0 z-10" style={{ minWidth: 0 }}>
 													{[
 														{
-															src: "https://godigitifynexsus.vercel.app/",
+															src: "https://amarpreet004.github.io/project-web/home.html",
 															style: { transform: 'scale(1.13)' },
 															zIndex: 30,
 															className: ""
 														},
 														{
-															src: "/preview/landing",
+															src: "https://www.falconwebsolution.com",
 															style: { transform: 'translateX(-36px) scale(1.07)' },
 															zIndex: 20,
 															className: "-ml-16"

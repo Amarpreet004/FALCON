@@ -1,16 +1,14 @@
 
-import HomePage from "./home/page";
-import FeaturesSectionDemo from "./home/Card";
-import { StickyScrollRevealDemo } from "./home/stickyscroll/scroll";
+
 import Score from "./home/score/score";
 import React from "react";
-import  ProjectsShowcase  from "./home/available/available";
+
 import { InfiniteMovingCardsDemo } from "./home/review/review";
 import {FAQ} from "../app/contact/faq";
 import DEV from "./home/Hero/DEV";
 import { InfiniteMovingCardsDemo as Crousel } from "./home/Hero/crousel/crousel";
 import WhoAreYou from "./home/whoareyou/whoareyou";
-import { WorldMapDemo } from "./home/worldservice/mappage";
+
 
 import ServicesFAQ from "./home/services/ourservices";
 

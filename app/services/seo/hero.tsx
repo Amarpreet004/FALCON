@@ -1,111 +1,100 @@
-"use client";
+"use client"
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { ease: "easeOut" } },
-};
-
-export default function Hero() {
+export default function SoFiLanding() {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-20 py-16 bg-white overflow-hidden">
-      {/* LEFT CONTENT */}
-      <motion.div
-        className="flex-1 space-y-6 max-w-xl"
-        initial="hidden"
-        animate="show"
-        variants={fadeInUp}
-        transition={{ staggerChildren: 0.2 }}
-      >
-        <motion.span
-          variants={fadeInUp}
-          className="text-blue-600 font-medium uppercase tracking-wide"
-        >
-          Financial Consulting
-        </motion.span>
-
-        <motion.h1
-          variants={fadeInUp}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
-        >
-          Empowering Your <span className="text-blue-600">Business Growth</span>
-        </motion.h1>
-
-        <motion.p
-          variants={fadeInUp}
-          className="text-gray-600 text-lg leading-relaxed"
-        >
-          We provide professional financial advice and strategies to help your
-          business achieve consistent growth and long-term success.
-        </motion.p>
-
-        {/* CTA + PRICE */}
-        <motion.div
-          variants={fadeInUp}
-          className="flex items-center gap-6 pt-4"
-        >
-          <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-all">
-            Get Started <ArrowRight size={18} />
-          </button>
+    <div className="min-h-screen bg-white">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-8 py-12 grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Column */}
+        <div className="space-y-8">
+          <div className="inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm mb-6 border border-gray-100 group hover:shadow-md transition-shadow duration-300">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                      <span className="text-sm font-medium text-gray-700">Grow your business</span>
+                      <ChevronRight className="ml-2 w-4 h-4 text-blue-500 group-hover:translate-x-1 transition-transform duration-200" />
+                    </div>
           <div>
-            <p className="text-gray-900 font-bold text-xl">$249</p>
-            <p className="text-gray-500 text-sm">per consultation</p>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">
+              Empowering Your<br />
+              Business Growth<br />
+              to <span className="relative inline-block">
+                next
+                
+              </span> level
+            </h1>
+            <p className="text-gray-600 text-lg">
+              We provide professional financial advice and strategies to help your <br />
+              business achieve consistent growth and long-term success.
+            </p>
           </div>
-        </motion.div>
 
-        {/* NAVIGATION ARROWS */}
-        <motion.div variants={fadeInUp} className="flex gap-3 pt-8">
-          <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white transition-all">
-            <ChevronLeft size={20} />
+          <button className="bg-[#5C0632] text-white px-8 py-4 rounded-full hover:bg-[#4a0528] transition flex items-center space-x-2 group">
+            <span>Get in Touch</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
           </button>
-          <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white transition-all">
-            <ChevronRight size={20} />
-          </button>
-        </motion.div>
-      </motion.div>
 
-      {/* RIGHT SIDE CARDS / IMAGE */}
-      <motion.div
-        className="flex-1 mt-12 lg:mt-0 relative flex justify-center"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        {/* Main Hero Image */}
-        <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[480px] rounded-2xl overflow-hidden shadow-2xl">
-          <Image
-            src="/hero-image.jpg"
-            alt="Financial consultant"
-            fill
-            className="object-cover"
-          />
+          
+
+          
         </div>
 
-        {/* Floating card top-left */}
-        <motion.div
-          className="absolute -top-6 -left-6 bg-white shadow-lg rounded-2xl p-4 w-40"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          <p className="text-sm text-gray-500">Efficiency</p>
-          <h4 className="text-xl font-bold text-blue-600">98%</h4>
-        </motion.div>
+        {/* Right Column */}
+        <div className="relative">
+          {/* Main Background Card - Decreased Width */}
+          <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl w-100 mx-auto">
+            <div className="relative"> 
+              <img 
+                  src="https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg"
+                  alt="Professional consultant"
+                  className="w-full h-64 object-cover"
+                />
 
-        {/* Floating card bottom-right */}
-        <motion.div
-          className="absolute -bottom-6 -right-6 bg-blue-600 text-white shadow-xl rounded-2xl p-4 w-44"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <p className="text-sm opacity-80">Customer Rating</p>
-          <h4 className="text-xl font-bold">4.9/5.0</h4>
-        </motion.div>
-      </motion.div>
-    </section>
+              {/* Bottom Image Section - Professional Woman */}
+              <div className="bg-white ">
+                <img 
+                  src="https://img.freepik.com/free-photo/elegant-female-student-glasses-posing-with-pleasure-holding-laptop_197531-6706.jpg"
+                  alt="Professional consultant"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Stats Card - Moved Outside */}
+          {/* <div className="absolute -top-4 -right-8 bg-white rounded-2xl p-6 shadow-xl w-64">
+            <div className="flex items-start space-x-3">
+              <div className="bg-[#5C0632] rounded-full p-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M9 11L12 14L22 4M21 12V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H16" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <div className="text-[#5C0632] text-sm font-semibold mb-1">+25.5%</div>
+                <h3 className="font-bold text-lg mb-2">
+                  Increase of the<br />
+                  companys<br />
+                  efficiency
+                </h3>
+                <div className="text-xs text-gray-400">(+2.5%) Month</div>
+                <div className="mt-2 h-1 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="h-full bg-[#5C0632]" style={{width: '75%'}}></div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* Rating Card - Moved Outside */}
+          <div className="absolute -bottom-6 -left-8 bg-[#5C0632] rounded-2xl p-5 shadow-xl flex items-center space-x-4 w-64">
+            <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center">
+              <span className="text-[#5C0632] font-bold text-lg">9.8</span>
+            </div>
+            <div>
+              <div className="text-white font-semibold">Overall clients rate</div>
+              <div className="text-gray-300 text-sm">More than 100 reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

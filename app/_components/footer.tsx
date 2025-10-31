@@ -29,7 +29,7 @@ export default function Footer() {
   ];
 
   const legalLinks: ServiceLink[] = [
-    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Privacy Policy', href: '/policy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
   ];

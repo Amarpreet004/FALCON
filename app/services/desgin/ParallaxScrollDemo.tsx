@@ -32,7 +32,7 @@ export function ParallaxScrollDemo() {
 }
 
 const images = [
-  "/image1.png",
+  "/tickets are live[1].jpg",
   "/image2.png",
   "/image3.png",
   "/image4.png",
@@ -40,7 +40,7 @@ const images = [
   "/image6.png",
   "/image7.png",
   "/image8.png",
-  "/image9.png",
+  "/gd post amar copy.jpg",
   "/image10.png",
   "/image11.png",
   "/image12.png",

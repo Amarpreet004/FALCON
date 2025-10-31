@@ -28,13 +28,7 @@ interface ToolCard {
   color: "from-gray-500 to-black",
   icon: <Scissors className="w-4 h-4" />,
 },
-  {
-    name: "Next.js",
-    image:
-      "/next-js.svg",
-    color: "from-sky-600 to-blue-900",
-    icon: <Film className="w-5 h-4" />,
-  },
+  
   {
     name: "Android Studio",
     image:

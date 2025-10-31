@@ -4,6 +4,7 @@ import VideoTools from './VideoTools'
 import VideoEditingGallery from './videoediting'
 import VideoCoreServices from './video-tools'
 import WebDevToolsCards from './tool'
+import SeoMarketingPage from './last'
 
 export default function Page() {
   return (
@@ -23,6 +24,9 @@ export default function Page() {
       </div>
       <div className="mb-8">
         <VideoCoreServices />
+      </div>
+      <div className="mb-8">
+       < SeoMarketingPage />
       </div>
     </>
   )

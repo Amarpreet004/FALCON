@@ -2,6 +2,7 @@
 import Hero from "./hero";
 import GraphicDesignSection from "./last";
 import Seo from "./services";
+import MarketingSoftware from "./types";
 
 export default function Page() {
   return (
@@ -15,6 +16,9 @@ export default function Page() {
       </div>
       <div className="mt-8">
         <GraphicDesignSection/>
+      </div>
+      <div className="mb-8">
+        <MarketingSoftware />
       </div>
       
     </>

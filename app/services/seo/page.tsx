@@ -1,8 +1,10 @@
 "use client"
 import Hero from "./hero";
-import GraphicDesignSection from "./last";
+
 import Seo from "./services";
 import MarketingSoftware from "./types";
+import WhoWeAre from "./score/score";
+import SeoMarketingPage from "./realast";
 
 export default function Page() {
   return (
@@ -10,15 +12,14 @@ export default function Page() {
     
       <div className="mt-14">
         <Hero />
-      </div>
-      <div className="mt-8">
+      
+
         <Seo />
-      </div>
-      <div className="mt-8">
-        <GraphicDesignSection/>
-      </div>
-      <div className="mb-8">
+    
+      <WhoWeAre />
+      
         <MarketingSoftware />
+        <SeoMarketingPage />
       </div>
       
     </>

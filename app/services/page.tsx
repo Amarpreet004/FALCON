@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { SpotlightNewDemo } from './desgin/SpotlightNewDemo';
 import { ParallaxScrollDemo } from './desgin/ParallaxScrollDemo';
 import GradientTextDemo  from './desgin/GradientText';
-import { AnimatedTestimonialsDemo } from './desgin/video_editing/AnimatedTestimonialsDemo';
+
 import WebDevToolsCards from './desgin/services/servic';
+import VideoEditingSection from './desgin/video_editing/newedite';
 export default function ServicesPage() {
   return (
     <div className="w-full">
@@ -18,7 +19,8 @@ export default function ServicesPage() {
         <WebDevToolsCards/>
           <GradientTextDemo/>
         < ParallaxScrollDemo/>
-        <AnimatedTestimonialsDemo/>
+        
+        <VideoEditingSection/>
     
        
     </div>

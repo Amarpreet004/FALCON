@@ -10,7 +10,6 @@ const MobileApps = () => (
 	<div className="mt-20 flex flex-col gap-10">
 		<MobileAppHero />
 		<WebDevToolsCards />
-		
 		<AppTypesCards />	
 		<TripleIphoneFrame />
 		<WebDevelopmentServices />

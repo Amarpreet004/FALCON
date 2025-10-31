@@ -1,25 +1,13 @@
 "use client";
 import React from "react";
+import InfiniteMovingCardsDemo from "./heroright";
 
 export default function GraphicsHero() {
     return (
         <section className="w-full bg-white py-12 px-4 flex flex-col md:flex-row-reverse items-center justify-center min-h-[60vh] relative overflow-hidden">
             {/* Right: Image & Shapes */}
             <div className="relative flex-1 flex items-center justify-center mb-10 md:mb-0 md:pl-12">
-                <div className="absolute -top-8 -left-8 w-40 h-40 bg-[#660033]/10 rounded-full blur-2xl animate-float" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#660033]/20 rounded-full blur-xl animate-float-delay" />
-                <div className="absolute top-10 right-0 w-16 h-16 bg-[#660033]/20 rounded-full blur-lg animate-float" />
-                <img
-                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=800&auto=format&fit=crop"
-                    alt="Falcon Web Solution UI/UX and Graphic Design Portfolio"
-                    className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-xl border-4 border-white"
-                    draggable={false}
-                />
-                {/* Decorative shapes */}
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#660033] rounded-full opacity-80 rotate-12" />
-                <div className="absolute bottom-8 right-8 w-8 h-8 bg-[#660033] rounded-lg opacity-60 rotate-45" />
-                <div className="absolute top-1/2 left-0 w-8 h-8 bg-[#660033] rounded-full opacity-40" />
-            </div>
+                <InfiniteMovingCardsDemo/></div>
 
             {/* Left: Content */}
             <div className="flex-1 flex flex-col items-start animate-fade-in-left">

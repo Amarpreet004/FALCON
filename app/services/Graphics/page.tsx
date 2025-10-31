@@ -4,6 +4,7 @@ import DomeGallery from "./DomeGallery";
 import WhoAreYou from "./graphictype";
 import WebDevToolsCards from "./graphic-tools";
 import title from "./title";
+import StatsDemoCard from "./last";
 export default function Page() {
   return (
     <>
@@ -22,6 +23,9 @@ export default function Page() {
       </div>
       <div style={{ width: '100vw', height: '100vh' }}>
         <DomeGallery />
+      </div>
+      <div style={{ width: '100vw', height: '100vh' }}>
+        <StatsDemoCard />
       </div>
       
     </>

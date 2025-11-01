@@ -1,4 +1,6 @@
+
 import { IphoneUIUX } from "./iframe";
+import  Link  from "next/link";
 import React from "react";
 
 export default function MobileAppHero() {
@@ -15,9 +17,10 @@ export default function MobileAppHero() {
 						We have the largest selection of unique tours. <br />
 						Try our easy and quick tour selection for any request. <br /> 24-hour support is always happy to answer all your questions.
 					</p>
-					<button className="bg-[#FF5F1F] text-white text-lg font-semibold rounded-full px-8 py-3 mb-4 transition hover:bg-[#3a2c2d]">
-						Get Started
+					<button className="bg-[#FF5F1F] text-white text-lg font-semibold rounded-full px-8 py-3 mb-4 transition hover:bg-[#3a2c2d]" >
+						<Link href="/contact/Bookcall">Get Started</Link>
 					</button>
+			
 					<div className="flex items-center gap-3 mt-2">
 						<span className="text-sm text-[#fff]">The mobile app is available now</span>
 						<a href="#" className="inline-block" aria-label="App Store">

@@ -180,7 +180,7 @@ const WebsiteTypeCard: React.FC<{ websiteType: WebsiteType; index: number }> = (
           <div className="flex items-center justify-between">
             {/* Removed timeline from card footer */}
             <motion.a
-              href="/contact" // Update this path if your Get In Touch form is elsewhere
+              href="/contact/Bookcall" // Update this path if your Get In Touch form is elsewhere
               className="group/btn px-6 py-2 bg-[#5C0632] border border-[#5C0632]/30 rounded-full text-white font-semibold hover:bg-[#660033] transition-all duration-300 shadow-lg flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

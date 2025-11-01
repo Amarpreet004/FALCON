@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { Clock, Star, Play, Check, Phone, User, ChevronRight, Rocket, Code, Palette, Smartphone, Globe, BarChart2, Sparkles } from 'lucide-react';
+import { Clock, Star, Play, Check, Phone, User, ChevronRight, Rocket, Code, Palette, Smartphone, Globe, BarChart2, Sparkles, Link } from 'lucide-react';
 
 
 function VideoHeroSection() {
@@ -95,7 +95,7 @@ function VideoHeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <button className="px-6 py-3.5 bg-gradient-to-r from-[#660033] to-[#660033] text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-green-400">
               <Play className="mr-2 w-4 h-4 group-hover:scale-125 transition-transform" />
-              <span className="font-medium">Book A Call</span>
+              <span className="font-medium"> Book A Call</span>
             </button>
             
           </div>

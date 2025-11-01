@@ -1,16 +1,17 @@
 "use client"
-import GraphicsHero from "./hero";
+
 import DomeGallery from "./DomeGallery";
 import WhoAreYou from "./graphictype";
 import WebDevToolsCards from "./graphic-tools";
 import title from "./title";
 import StatsDemoCard from "./last";
+import FalconHero from "./hero";
 export default function Page() {
   return (
     <>
     
-      <div className="mt-14">
-        <GraphicsHero />
+      <div className="mt-8">
+        <FalconHero />
       </div>
       <div className="mt-8">
         <WebDevToolsCards/>

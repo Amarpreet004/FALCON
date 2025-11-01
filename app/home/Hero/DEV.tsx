@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import IphoneUI from './crousel/iphoneui'
+import  Link  from 'next/link';
 
 // Styles object for component-specific styles
 const styles = {
@@ -127,6 +128,7 @@ function DEV() {
           </ul>
         )}
         <div style={buttonGroupStyle}>
+           <Link href="/services">
           <button style={{
             background: 'white',
             color: '#181818',
@@ -139,6 +141,8 @@ function DEV() {
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
             transition: 'background 0.2s',
           }}>Explore Services</button>
+          </Link>
+          <Link href="/contact/Bookcall">
           <button style={{
             background: '#232323',
             color: 'white',
@@ -151,6 +155,7 @@ function DEV() {
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
             transition: 'background 0.2s',
           }}>Get In Touch</button>
+          </Link>
         </div>
       </div>
       {showIphone && (

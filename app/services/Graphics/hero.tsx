@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FalconHero() {
   const testimonials = [
@@ -11,12 +12,11 @@ export default function FalconHero() {
     { quote: "/amartrevel.png", name: "Image 4" },
     { quote: "/clickmasterweb.png", name: "Image 5" },
   ];
-  
 
   return (
-    <section className="min-h-screen bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 relative overflow-hidden">
-      {/* Left Section */}
-      <div className="max-w-xl space-y-6 text-center md:text-left z-10">
+    <section className="bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 relative overflow-hidden min-h-[70vh] md:min-h-screen">
+      {/* Left Section (text) */}
+      <div className="max-w-xl space-y-6 text-center md:text-left z-10 mt-20 md:mt-0">
         <h1 className="text-5xl font-extrabold text-gray-900 leading-tight">
           Expert <span className="text-[#5C0632]">UI/UX & Graphic Design</span>{" "}
           That Builds Your Brand
@@ -26,13 +26,17 @@ export default function FalconHero() {
           customers. From logos and branding to complete web solutions, we bring
           your vision to life.
         </p>
-        <button className="px-8 py-3 bg-[#5C0632] text-white font-medium rounded-full shadow-md hover:bg-[#400224] transition">
-          Get Your Free Quote
-        </button>
+
+        {/* Redirect button */}
+        <Link href="/contact/Bookcall">
+          <button className="px-8 py-3 bg-[#5C0632] text-white font-medium rounded-full shadow-md hover:bg-[#400224] transition">
+            Get Your Free Quote
+          </button>
+        </Link>
       </div>
 
-      {/* Right Section (Wider Landscape Cards) */}
-      <div className="relative w-[580px] h-[650px] flex justify-center items-center mt-12 md:mt-0 overflow-hidden">
+      {/* Right Section — hidden on mobile */}
+      <div className="hidden md:flex relative md:w-[580px] h-auto md:h-[650px] justify-center items-center mt-12 md:mt-0 overflow-hidden">
         <div className="absolute inset-0 flex justify-center gap-12">
           <InfiniteMovingCards
             items={testimonials}

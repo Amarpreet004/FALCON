@@ -22,13 +22,18 @@ export function TeamCard() {
     },
     {
       name: "Krish Shivhare",
-      role: "Graphic Designer",
+      role: "Web Developer",
       image: "/krish.jpg"
     },
     {
       name: "Daljit Kaur",
-      role: "Graphic Designer & Video Editor",
+      role: "Graphic Designer",
       image: "/daljit.jpg"
+    },
+    {
+      name: "Amandeep Kaur",
+      role: "Graphic Designer & Video Editor",
+      image: "/amandeep.jpg"
     }
   ];
 

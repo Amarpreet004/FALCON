@@ -5,9 +5,9 @@ import dynamic from "next/dynamic";
 const CountUp = dynamic(() => import("../../home/score/CountUp"), { ssr: false });
 
 const scores = [
-  { value: 7, suffix: "+", label: "Years Experience" },
-  { value: 500, suffix: "+", label: "Projects Completed" },
-  { value: 50, suffix: "+", label: "Team Members" },
+  { value: 5, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "+", label: "Projects Completed" },
+  { value: 20, suffix: "+", label: "Team Members" },
 ];
 
 export default function ScoreSection() {

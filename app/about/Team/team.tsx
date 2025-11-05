@@ -16,14 +16,19 @@ export function TeamCard() {
     },
     {
       name: "Mayank Shivhare",
-      role: "Web Developer",
+      role: "Full Stack Developer",
       
       image: "/mayank.jpg"
     },
     {
       name: "Krish Shivhare",
-      role: "full Stack Developer",
+      role: "Graphic Designer",
       image: "/krish.jpg"
+    },
+    {
+      name: "Daljit Kaur",
+      role: "Graphic Designer & Video Editor",
+      image: "/daljit.jpg"
     }
   ];
 

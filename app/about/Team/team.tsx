@@ -31,7 +31,7 @@ export function TeamCard() {
       image: "/daljit.jpg"
     },
     {
-      name: "Amandeep Kaur",
+      name: "Amandeep Singh",
       role: "Graphic Designer & Video Editor",
       image: "/amandeep.jpg"
     }

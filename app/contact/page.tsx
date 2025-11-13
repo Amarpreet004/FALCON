@@ -80,7 +80,7 @@ export default function ContactPage() {
               </p>
             </div>
             <a
-              href="https://www.google.com/maps/place/GMJC%2B5CF,+Jansla,+Punjab+140506/@30.5304869,76.6710047,652m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390fc2e232e44329:0x3d339f2db6649e75!8m2!3d30.5304869!4d76.6710047!16s%2Fg%2F11q4087pxq?entry=ttu&g_ep=EgoyMDI1MDcwNy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/FX67ZY8JQWsHcMzr6"
               className="text-gray-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 border-b border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400"
             >
               View on Google Maps

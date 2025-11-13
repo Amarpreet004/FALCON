@@ -42,7 +42,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img
-              src="/FALCONLOGO.png"
+              src="/logo.png"
               alt="Falcon Industry Logo"
               className="h-7 w-20 sm:h-8 sm:w-28 md:h-10 md:w-36 lg:h-12 lg:w-44 object-contain transition-all duration-300"
               style={{ maxWidth: '100%', height: 'auto' }}

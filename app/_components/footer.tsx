@@ -73,7 +73,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/falkan logo new 1.png" 
+                src="/logo.png" 
                 alt="Falcon Solutions New Logo" 
                 className="h-14 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
               />

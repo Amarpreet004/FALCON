@@ -2,168 +2,271 @@
 
 import { motion } from "framer-motion";
 
-export default function PrivacyPolicy() {
+export default function CookiePolicy() {
   return (
-    <div className="w-[97%] mx-auto bg-white text-gray-800 py-16 px-6 md:px-12 rounded-3xl shadow-md">
+    <div className="w-[97%] mt-14 mx-auto bg-white text-black py-16 px-6 md:px-12 rounded-3xl shadow-md">
       {/* Page Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-extrabold text-center mb-10 text-[#5C0632]"
+        className="text-4xl md:text-5xl font-extrabold text-center mb-6 text-[#5C0632]"
       >
-        Privacy Policy
+        Cookie Policy
       </motion.h1>
 
-      <div className="space-y-8 text-base md:text-lg leading-relaxed">
+      <div className="text-sm md:text-base text-black text-center mb-6">
+        <strong>Last updated on:</strong> 1st July 2025
+      </div>
+
+      <div className="space-y-6 text-base md:text-lg leading-relaxed">
         <p>
-          <strong>Effective Date:</strong> November 1, 2025
+          Cookies are small text files that, like most other web servers, we place on the device you use to access our
+          website. They help us recognise your device during a session or on future visits, primarily to provide a
+          better user experience and to improve our site performance.
         </p>
 
-        <p>
-          At <span className="font-semibold text-[#5C0632]">Falcon Web Solution</span> (“we,” “our,” or “us”), we respect
-          your privacy and are committed to protecting your personal information. This Privacy Policy explains how we
-          collect, use, and safeguard data when you visit our website, interact with our services, or contact us.
-        </p>
-
-        {/* Section 1 */}
         <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">1. Information We Collect</h2>
-          <p className="mb-2">
-            We collect the following types of information to deliver and improve our services:
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Types of cookies used</h2>
+          <p>
+            The cookies we deploy may be categorised by purpose or by duration (how long they remain on your device).
+            Below we describe the main categories.
           </p>
-          <ul className="list-disc pl-6 space-y-1">
+
+          <h3 className="font-semibold mt-3">By purpose</h3>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
             <li>
-              <strong>Personal Information:</strong> Name, Email Address, Phone Number, Company Name, and Project Details
-              you provide when you contact us or fill out forms.
+              <strong>Strictly necessary cookies:</strong> Essential for the website to function. They are typically set
+              in response to actions you take (logging in, filling forms, setting privacy preferences). These cookies
+              cannot normally be switched off without affecting core functionality.
+            </li>
+
+            <li>
+              <strong>Performance / Analytics cookies:</strong> Also called statistics cookies. These collect anonymous
+              information about how visitors use our site (page visits, time on page, bounce rates, load times). We use
+              aggregated data to improve site performance and user experience.
+            </li>
+
+            <li>
+              <strong>Functional cookies:</strong> Enable enhanced functionality and personalization (remembering language,
+              login preferences, or other UI choices). They are not strictly necessary but improve convenience.
+            </li>
+
+            <li>
+              <strong>Targeting / Advertising cookies:</strong> Used to store visitor identifiers and help deliver
+              relevant advertising. They enable functions such as ID synchronization, segmentation, modeling and reporting,
+              and may be set by advertising partners. These cookies may also track interactions with embedded videos to
+              display relevant ads across sites.
+            </li>
+          </ul>
+
+          <h3 className="font-semibold mt-4">By duration</h3>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>
+              <strong>Session cookies:</strong> Exist only for the duration of a browser session and expire when you close
+              the browser. Usually used for navigation and secure areas of the site.
             </li>
             <li>
-              <strong>Technical & Usage Data:</strong> IP address, browser type, device info, and website activity to
-              enhance user experience and security.
+              <strong>Persistent cookies:</strong> Remain on your device after the session ends and are used to remember
+              preferences or recognise returning visitors. The lifespan varies depending on the cookie purpose.
             </li>
           </ul>
-        </section>
 
-        {/* Section 2 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">2. How We Use Your Information</h2>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>To respond to your inquiries and deliver requested services.</li>
-            <li>To improve our website performance and user experience.</li>
-            <li>To send marketing updates (only if you opt in).</li>
-            <li>To comply with legal or regulatory requirements.</li>
-          </ul>
-          <p className="mt-2 font-medium text-gray-700">We do not sell or rent your data to anyone.</p>
-        </section>
-
-        {/* Section 3 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">3. Cookies & Tracking</h2>
-          <p>
-            We use cookies and similar technologies to analyze traffic, personalize content, and improve your experience.
-            You can disable cookies through your browser settings at any time.
+          <p className="mt-3">
+            If you disable cookies via your browser, some parts of the website may not work correctly. You can delete
+            existing cookies or prevent future cookies via your browser settings.
           </p>
         </section>
 
-        {/* Section 4 */}
         <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">4. Data Security</h2>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Third-party cookies</h2>
           <p>
-            We use secure servers, SSL encryption, and restricted access to protect your personal information from
-            unauthorized use, alteration, or disclosure.
+            Some cookies on our site are set by third parties (analytics providers, advertising networks, social media
+            platforms). These third parties may collect information about your browsing across multiple sites. We use
+            these providers to help measure site usage, run targeted advertising, and improve site features.
           </p>
-        </section>
 
-        {/* Section 5 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">5. Data Retention</h2>
-          <p>
-            We retain your information only as long as necessary to fulfill our services and comply with legal
-            obligations. When no longer required, your data is securely deleted.
-          </p>
-        </section>
-
-        {/* Section 6 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">6. Your Rights</h2>
-          <p>You may have rights to:</p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>Access or request a copy of your data.</li>
-            <li>Request corrections or deletion (“Right to be Forgotten”).</li>
-            <li>Withdraw consent at any time.</li>
-          </ul>
           <p className="mt-2">
-            To exercise your rights, email us at{" "}
-            <a
-              href="mailto:falconsolutions492@gmail.com"
-              className="text-[#5C0632] underline hover:text-[#450526]"
-            >
-              falconsolutions492@gmail.com
-            </a>
-            .
+            To opt out of targeted advertising, you can set preferences with our advertising partners or use industry opt-out
+            tools such as the Network Advertising Initiative or Digital Advertising Alliance.
           </p>
+
+          <div className="overflow-x-auto mt-4">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="text-left">
+                  <th className="border-b py-2 pr-4">Name</th>
+                  <th className="border-b py-2 pr-4">Purpose</th>
+                  <th className="border-b py-2">Privacy / Cookie Policy (info & opt-out)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="py-2 pr-4 align-top">Google (Analytics / Ads)</td>
+                  <td className="py-2 pr-4 align-top">Web analytics, performance measurement, targeted & re-targeted advertising</td>
+                  <td className="py-2 align-top">
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="underline">
+                      Google Privacy
+                    </a>
+                    <br />
+                    Opt-out: <a href="https://adssettings.google.com/" target="_blank" rel="noreferrer" className="underline">adssettings.google.com</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="py-2 pr-4 align-top">Facebook / Meta</td>
+                  <td className="py-2 pr-4 align-top">Targeted advertising, social widgets</td>
+                  <td className="py-2 align-top">
+                    <a href="https://www.facebook.com/privacy/explanation" target="_blank" rel="noreferrer" className="underline">
+                      Facebook Privacy
+                    </a>
+                    <br />
+                    Opt-out: <a href="https://www.facebook.com/help/568137493302217" target="_blank" rel="noreferrer" className="underline">ad settings</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="py-2 pr-4 align-top">LinkedIn</td>
+                  <td className="py-2 pr-4 align-top">Targeted advertising and professional re-targeting</td>
+                  <td className="py-2 align-top">
+                    <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noreferrer" className="underline">
+                      LinkedIn Privacy
+                    </a>
+                    <br />
+                    Opt-out info: <a href="https://www.linkedin.com/help/linkedin/answer/62931/manage-advertising-preferences" target="_blank" rel="noreferrer" className="underline">manage-advertising-preferences</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="py-2 pr-4 align-top">YouTube (Google)</td>
+                  <td className="py-2 pr-4 align-top">Embedded videos & targeted ads</td>
+                  <td className="py-2 align-top">
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="underline">Google Privacy</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="py-2 pr-4 align-top">Other analytics / ad partners</td>
+                  <td className="py-2 pr-4 align-top">Measurement, campaign analytics, advertising networks</td>
+                  <td className="py-2 align-top">Please refer to each partner’s privacy/cookie policy for retention and opt-out options.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        {/* Section 7 */}
         <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">7. Third-Party Services</h2>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">First-party cookies</h2>
           <p>
-            We may use trusted third-party tools (e.g., Google Analytics, EmailJS, or Meta Ads) for analytics and
-            marketing. These services comply with international data protection standards. We are not responsible for
-            third-party privacy practices.
+            In addition to third-party cookies, we deploy first-party cookies directly to support essential site functions
+            and personalization (session management, preference storage, analytics). These cookies help us provide a stable,
+            personalised and efficient browsing experience.
+          </p>
+
+          <div className="overflow-x-auto mt-4">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="text-left">
+                  <th className="border-b py-2 pr-4">Name (example)</th>
+                  <th className="border-b py-2 pr-4">Purpose</th>
+                  <th className="border-b py-2">Retention</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="py-2 pr-4 align-top">sessionid / __session</td>
+                  <td className="py-2 pr-4 align-top">Session management (essential)</td>
+                  <td className="py-2 align-top">Session (expires on browser close)</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4 align-top">cookie_pref</td>
+                  <td className="py-2 pr-4 align-top">Stores cookie consent & preferences</td>
+                  <td className="py-2 align-top">Persistent (varies – e.g., 6–12 months)</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4 align-top">analytics_id</td>
+                  <td className="py-2 pr-4 align-top">Site analytics (first-party)</td>
+                  <td className="py-2 align-top">Persistent (varies by purpose)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-3">
+            Other first-party cookies and their retention are described in the table above. Apart from strictly necessary
+            cookies, you can opt out of non-essential cookies from our cookie banner or via your browser settings.
           </p>
         </section>
 
-        {/* Section 8 */}
         <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">8. Children’s Privacy</h2>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Cookie retention</h2>
           <p>
-            Our services are intended for users aged 13 and above. We do not knowingly collect information from children
-            under 13.
+            Information collected via cookies will not be retained longer than necessary to fulfil the purposes described
+            in this policy, unless a longer retention period is required by law or for legitimate business purposes.
+            Retention periods for third-party cookies are controlled by the third party and are available in their privacy
+            or cookie policies (links provided above).
           </p>
         </section>
 
-        {/* Section 9 */}
         <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">9. Legal Disclosure</h2>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">How to manage or delete cookies</h2>
           <p>
-            We may disclose data if required by law, government authorities, or to protect our legal rights, property, or
-            users’ safety.
+            Most browsers allow you to block, restrict, or delete cookies via settings. Refer to your browser help pages
+            (Chrome, Firefox, Edge, Safari) for instructions. Deleting or blocking cookies may affect site functionality
+            (for example, staying logged in or remembering preferences).
           </p>
-        </section>
 
-        {/* Section 10 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">10. Policy Updates</h2>
-          <p>
-            We may update this policy occasionally. Updates will be posted on this page with a revised effective date.
+          <p className="mt-2">
+            To opt out of interest-based advertising across multiple companies, you can visit:
           </p>
-        </section>
-
-        {/* Section 11 */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">11. Contact Us</h2>
-          <p>If you have any questions or concerns, contact us at:</p>
-          <ul className="list-none pl-0 space-y-1">
-            <li>
-              📧{" "}
-              <a
-                href="mailto:falconsolutions492@gmail.com"
-                className="text-[#5C0632] underline hover:text-[#450526]"
-              >
-                falconsolutions492@gmail.com
-              </a>
-            </li>
-            <li>📞 +91 62396 25959</li>
-            <li>🏢 Highland Park, Zirakpur, Punjab, India</li>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li><a href="http://optout.networkadvertising.org/" target="_blank" rel="noreferrer" className="underline">Network Advertising Initiative (NAI) opt-out</a></li>
+            <li><a href="http://optout.aboutads.info/" target="_blank" rel="noreferrer" className="underline">Digital Advertising Alliance (DAA) / YourAdChoices</a></li>
           </ul>
         </section>
 
-        <div className="pt-6 border-t border-gray-300">
-          <p className="text-sm text-gray-600 text-center">
-            This Privacy Policy complies with the{" "}
-            <strong>IT Act (India), GDPR (EU),</strong> and{" "}
-            <strong>CCPA (USA)</strong> regulations.
+        <section>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Website ownership & copyright</h2>
+          <p>
+            This website, including its cookie implementations, UI/UX, design and code, is designed and developed by{" "}
+            <strong>Amarpreet Singh, Founder &amp; CEO of Falcon Web Solution</strong>. All rights are strictly reserved.
+            No individual, agency, student, freelancer or company is permitted to copy, reuse, reproduce, screenshot,
+            or showcase this website or its cookie implementations (in portfolios, case studies, demo reels or otherwise)
+            without prior written permission from Falcon Web Solution.
+          </p>
+
+          <p className="mt-3">
+            The Falcon Web Solution name, logo and brand assets are protected under copyright and trademark laws. Unauthorized
+            use of any branding asset is strictly prohibited and may result in legal action.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Contact</h2>
+          <p>
+            If you have questions about this cookie policy, or would like this policy in another format, contact:
+          </p>
+          <ul className="list-none pl-0 mt-2 space-y-1">
+            <li>Contact: <strong>Amarpreet Singh</strong></li>
+            <li>Position: Founder &amp; CEO, Falcon Web Solution</li>
+            <li>Address: Highland Park, Zirakpur, Punjab, India</li>
+            <li>Phone: +91 62396 25959</li>
+            <li>Email: <a href="mailto:falconsolutions492@gmail.com" className="text-[#5C0632] underline">falconsolutions492@gmail.com</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Translations & precedence</h2>
+          <p>
+            Where translations of this policy are provided, the English version shall prevail in case of inconsistency.
+            Country or region-specific cookie statements may be published separately where required.
+          </p>
+        </section>
+
+        <div className="pt-6 border-t border-black">
+          <p className="text-sm text-center">
+            This Cookie Policy is part of our broader Privacy Policy and is intended to comply with applicable laws.
+            For specific legal advice, please consult a qualified attorney.
           </p>
         </div>
       </div>

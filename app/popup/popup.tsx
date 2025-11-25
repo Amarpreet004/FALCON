@@ -6,7 +6,7 @@ import Link from "next/link";
 type ConsentStatus = "accepted" | "only-necessary" | "rejected" | "custom";
 
 const COOKIE_KEY = "falcon_cookie_consent";
-const BANNER_DELAY_MS = 2000; // show banner after 2s
+const BANNER_DELAY_MS = 5000; // show banner after 5s
 const CONSENT_TTL_DAYS = 30; // consent expires after 30 days
 const CONSENT_TTL_MS = CONSENT_TTL_DAYS * 24 * 60 * 60 * 1000;
 

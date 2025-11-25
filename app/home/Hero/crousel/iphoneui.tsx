@@ -57,12 +57,11 @@ const IphoneFrame: React.FC = () => {
       <div className="absolute z-0 w-full h-full" style={{ borderRadius: 60, overflow: 'hidden', top: 0, left: 0, paddingTop: 37 }}>
         {/* Internal rotating preview to avoid external stale layout */}
         <iframe
-          src={"/preview/landing"}
-          title="Hranium Infotech Internal Preview"
+          src={"https://www.falconwebsolution.com"}
+          title="Hranium Infotech"
           className="w-full h-full min-h-[420px] bg-white"
           style={{ border: "none", borderRadius: 0 }}
           loading="lazy"
-          sandbox="allow-same-origin allow-scripts"
         />
       </div>
     </div>

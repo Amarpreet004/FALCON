@@ -71,6 +71,7 @@ export default function Popup() {
         save("accepted", { functionality: true, experience: true, measurement: true, marketing: true });
         setBlocked(false);
         setOpen(false);
+        setShowBanner(false);
     }
 
     function handleOnlyNecessary() {
@@ -87,6 +88,7 @@ export default function Popup() {
         save("rejected", { functionality: false, experience: false, measurement: false, marketing: false });
         setBlocked(true);
         setOpen(true);
+        setShowBanner(false);
     }
 
     function handleChooseCookiesFromBanner() {

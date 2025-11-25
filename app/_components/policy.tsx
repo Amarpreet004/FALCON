@@ -22,7 +22,7 @@ export default function PrivacyStatement() {
       <div className="space-y-6 text-base md:text-lg leading-relaxed">
 
         <p>
-          <strong>Falcon Web Solution</strong> (hereinafter referred to as "Falcon", "we", "us" or "our") is committed to
+          <strong>Hranium Infotech</strong> (hereinafter referred to as "Hranium Infotech", "we", "us" or "our") is committed to
           respecting your privacy and choices. This Privacy Statement (the "Statement") explains our privacy practices
           regarding Personal Information that we collect and process in compliance with applicable data protection laws.
         </p>
@@ -32,8 +32,8 @@ export default function PrivacyStatement() {
           <p>
             Through this Statement we provide a clear synopsis of our privacy practices regarding Personal Information
             that we collect and process about you through various sources. While the primary focus is on data collected
-            through our websites (including www.falconwebsolution.com and its sub-domains — collectively the "Falcon
-            Websites"), the principles below apply across Falcon's operations. Depending on the purpose of processing and
+            through our websites (including www.hraniuminfotech.com and its sub-domains — collectively the "Hranium Infotech
+            websites"), the principles below apply across Hranium Infotech's operations. Depending on the purpose of processing and
             your relationship with us, we may provide additional, tailored privacy notices.
           </p>
         </section>
@@ -56,7 +56,7 @@ export default function PrivacyStatement() {
           <ul className="list-disc pl-6 space-y-1 mt-2">
             <li>
               <strong>Website & Technical Data:</strong> IP address, device identifiers, browser type, operating system,
-              telemetry, page views, referrer URLs, and cookie & tracking data collected when you visit the Falcon Websites.
+              telemetry, page views, referrer URLs, and cookie & tracking data collected when you visit the Hranium Infotech websites.
             </li>
             <li>
               <strong>Identity & Contact Details:</strong> Name, title, email address, telephone number, postal address,
@@ -94,7 +94,7 @@ export default function PrivacyStatement() {
             <li>From our employees or representatives when required for service delivery.</li>
             <li>From your employer, business partners, or service providers where relevant.</li>
             <li>Publicly available sources, social media profiles, and business directories.</li>
-            <li>Cookies, analytics tools and other tracking technologies when you visit Falcon Websites.</li>
+            <li>Cookies, analytics tools and other tracking technologies when you visit Hranium Infotech websites.</li>
             <li>Third-party vendors, suppliers or partners engaged to provide services on our behalf.</li>
           </ul>
         </section>
@@ -110,7 +110,7 @@ export default function PrivacyStatement() {
             <li>For marketing, lead generation, sales communications and to invite you to events or promotions (subject to your preferences).</li>
             <li>To publish testimonials, award announcements, or event participant details where consent has been provided.</li>
             <li>To perform analytics, reporting, and business intelligence to improve our products, services and marketing efforts.</li>
-            <li>To ensure information security, detect and prevent fraud, and protect Falcon’s systems and assets.</li>
+            <li>To ensure information security, detect and prevent fraud, and protect Hranium Infotech's systems and assets.</li>
             <li>To comply with legal obligations, respond to legal process and defend or enforce our rights.</li>
             <li>To use AI/ML tools for analytics and service improvement where applicable, ensuring responsible AI practices.</li>
           </ul>
@@ -141,7 +141,7 @@ export default function PrivacyStatement() {
           <h3 className="font-semibold mt-2">5.1 Who we share with</h3>
           <p>We may share Personal Information with:</p>
           <ul className="list-disc pl-6 space-y-1 mt-2">
-            <li>Falcon Web Solution entities, affiliates or group companies where required for business purposes.</li>
+            <li>Hranium Infotech entities, affiliates or group companies where required for business purposes.</li>
             <li>Service providers and processors such as hosting providers, analytics vendors, email & CRM providers, payment processors and marketing platforms.</li>
             <li>Professional advisors, auditors, and legal counsel where necessary.</li>
             <li>Government authorities, regulators, law enforcement agencies or courts as required by law or legal process.</li>
@@ -234,7 +234,7 @@ export default function PrivacyStatement() {
           <p>If you have questions, requests, or need this Statement in an alternative format, contact:</p>
           <ul className="list-none pl-0 mt-2 space-y-1">
             <li>Contact: <strong>Amarpreet Singh</strong></li>
-            <li>Position: Founder &amp; CEO, Falcon Web Solution</li>
+            <li>Position: Founder &amp; CEO, Hranium Infotech</li>
             <li>Address: Highland Park, Zirakpur, Punjab, India</li>
             <li>Phone: +91 62396 25959</li>
             <li>Email: <a href="mailto:falconsolutions492@gmail.com" className="text-[#5C0632] underline">falconsolutions492@gmail.com</a></li>
@@ -253,7 +253,7 @@ export default function PrivacyStatement() {
         <section>
           <h2 className="text-2xl font-bold text-[#5C0632] mb-2">15. Additional Notices for Candidates & Applicants</h2>
           <p>
-            If you apply for a role with Falcon, a separate candidate privacy notice will explain the categories of
+            If you apply for a role with Hranium Infotech, a separate candidate privacy notice will explain the categories of
             information we collect (e.g., name, contact details, CV/resume, qualifications, employment history, identity
             documents where applicable), the purposes of processing (recruitment, background checks, onboarding) and the
             legal bases relied upon. Candidate data may be shared with our authorized recruitment partners and processed

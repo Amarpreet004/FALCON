@@ -42,8 +42,8 @@ export function ThreeDCardDemo() {
           <h1 className="text-4xl font-bold">Amarpreet Singh</h1>
           <h4 className="text-1xl font-bold">Founder</h4>
           <p className="mt-4 max-w-xl text-black">
-            As the founder of Falcon Web Solution, my vision was clear from day one—to create a one-stop digital powerhouse that delivers modern, meaningful, and measurable results. What started as a passion for web design and visual creativity has now grown into a full-fledged digital solutions startup.
-At Falcon Web Solution, we specialize in website design & development, graphic design, video editing, and digital courses. We've already successfully delivered over 5 modern websites, each tailored to meet our clients’ unique needs. But we don’t just build websites—we take full ownership of our clients' online presence, from social media management to ongoing web maintenance and digital branding.
+            As the founder of Hranium Infotech, my vision was clear from day one—to create a one-stop digital powerhouse that delivers modern, meaningful, and measurable results. What started as a passion for web design and visual creativity has now grown into a full-fledged digital solutions startup.
+At Hranium Infotech, we specialize in website design & development, graphic design, video editing, and digital courses. We've already successfully delivered over 5 modern websites, each tailored to meet our clients’ unique needs. But we don’t just build websites—we take full ownership of our clients' online presence, from social media management to ongoing web maintenance and digital branding.
 Our goal is simple: Empower businesses to grow through design, technology, and strategy.
 With every project, we aim to blend creativity with functionality, offering not just a service—but a solution.
           </p>

@@ -229,14 +229,14 @@ export default function CookiePolicy() {
           <h2 className="text-2xl font-bold text-[#5C0632] mb-3">Website ownership & copyright</h2>
           <p>
             This website, including its cookie implementations, UI/UX, design and code, is designed and developed by{" "}
-            <strong>Amarpreet Singh, Founder &amp; CEO of Falcon Web Solution</strong>. All rights are strictly reserved.
+            <strong>Amarpreet Singh, Founder &amp; CEO of Hranium Infotech</strong>. All rights are strictly reserved.
             No individual, agency, student, freelancer or company is permitted to copy, reuse, reproduce, screenshot,
             or showcase this website or its cookie implementations (in portfolios, case studies, demo reels or otherwise)
-            without prior written permission from Falcon Web Solution.
+            without prior written permission from Hranium Infotech.
           </p>
 
           <p className="mt-3">
-            The Falcon Web Solution name, logo and brand assets are protected under copyright and trademark laws. Unauthorized
+            The Hranium Infotech name, logo and brand assets are protected under copyright and trademark laws. Unauthorized
             use of any branding asset is strictly prohibited and may result in legal action.
           </p>
         </section>
@@ -248,7 +248,7 @@ export default function CookiePolicy() {
           </p>
           <ul className="list-none pl-0 mt-2 space-y-1">
             <li>Contact: <strong>Amarpreet Singh</strong></li>
-            <li>Position: Founder &amp; CEO, Falcon Web Solution</li>
+            <li>Position: Founder &amp; CEO, Hranium Infotech</li>
             <li>Address: Highland Park, Zirakpur, Punjab, India</li>
             <li>Phone: +91 62396 25959</li>
             <li>Email: <a href="mailto:falconsolutions492@gmail.com" className="text-[#5C0632] underline">falconsolutions492@gmail.com</a></li>

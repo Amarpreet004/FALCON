@@ -6,8 +6,8 @@ export default function PreviewLanding() {
   return (
     <div className="w-full h-full min-h-[400px] bg-white">
       <iframe
-        src="https://www.falconwebsolution.com"
-        title="Falcon Web Solution"
+        src="https://www.hraniumin.com"
+        title="Hranium Infotech"
         className="w-full h-full min-h-[400px] border-none"
         style={{ border: "none", height: "100%" }}
         loading="lazy"

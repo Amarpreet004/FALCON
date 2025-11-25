@@ -306,7 +306,7 @@ const ExploreCourses = () => {
             Ready to Start Your Learning Journey?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of students who have transformed their careers with Falcon Solutions
+            Join thousands of students who have transformed their careers with Hranium Infotech
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 min-w-[200px]">

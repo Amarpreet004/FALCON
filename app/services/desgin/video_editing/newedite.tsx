@@ -34,7 +34,7 @@ export default function VideoEditingSection() {
           Professional <span className="text-gray-900">Video Editing</span>
         </h2>
         <p className="text-gray-900 mb-6 text-base md:text-lg leading-relaxed">
-          At <span className="font-semibold text-[#5C0632]">Falcon Web Solution</span>, 
+          At <span className="font-semibold text-[#5C0632]">Hranium Infotech</span>, 
           we turn your raw clips into cinematic stories. Whether it’s 
           for business promotions, social media reels, or brand videos — 
           our creative editors ensure every frame delivers impact, emotion, 

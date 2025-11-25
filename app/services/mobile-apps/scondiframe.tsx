@@ -69,7 +69,7 @@ const IphoneFrame: React.FC<IphoneFrameProps> = React.memo(({ src, style, classN
 			>
 				<iframe
 					src={src}
-					title="Falcon Internal Preview"
+					title="Hranium Infotech Internal Preview"
 					className="w-full h-full min-h-[320px] bg-white"
 					style={{ border: "none", borderRadius: 0 }}
 					loading="lazy"
@@ -110,7 +110,7 @@ const TripleIphoneFrame: React.FC = () => {
 															className: ""
 														},
 														{
-															src: "https://www.falconwebsolution.com",
+															src: "https://www.hraniuminfotech.com",
 															style: { transform: 'translateX(-36px) scale(1.07)' },
 															zIndex: 20,
 															className: "-ml-16"

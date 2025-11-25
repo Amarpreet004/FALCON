@@ -21,13 +21,13 @@ export default function TermsOfUse() {
 
       <div className="space-y-6 text-base md:text-lg leading-relaxed">
         <p className="font-semibold">
-          Terms of Use for www.falconwebsolution.com and its subdomains (the "Website")
+          Terms of Use for www.hraniuminfotech.com and its subdomains (the "Website")
         </p>
 
         <p>
           The use of any product, service or feature (the "Materials") available through the internet websites accessible at
-          <span className="font-semibold"> www.falconwebsolution.com</span> and its subdomains (collectively, the
-          "Website") by any user of the Website (“User”, “You” or “Your”) shall be governed by these Terms of Use. By
+          <span className="font-semibold"> www.hraniuminfotech.com</span> and its subdomains (collectively, the
+          "Website") by any user of the Website ("User", "You" or "Your") shall be governed by these Terms of Use. By
           accessing or using the Website, you acknowledge that you have read, understood and agree to be bound by these
           Terms. If you do not agree to these Terms, do not use the Website or download any Materials.
         </p>

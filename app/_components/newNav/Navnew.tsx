@@ -43,7 +43,7 @@ function Navbar({ className }: { className?: string }) {
           <a href="/" className="flex items-center">
             <img
               src="/hraniumlogo.png"
-              alt="Falcon Industry Logo"
+              alt="Hranium Infotech Logo"
               className="h-7 w-20 sm:h-8 sm:w-28 md:h-10 md:w-46 lg:h-15 lg:w-44 object-contain transition-all duration-300"
               style={{ maxWidth: '100%', height: 'auto' }}
             />

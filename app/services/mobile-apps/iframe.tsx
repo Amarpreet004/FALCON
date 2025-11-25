@@ -50,8 +50,8 @@ const IphoneFrame: React.FC = React.memo(() => {
       </svg>
       <div className="absolute z-0 w-full h-full" style={{ borderRadius: 60, overflow: 'hidden', top: 0, left: 0, paddingTop: 37 }}>
         <iframe
-          src={"https://www.falconwebsolution.com"}
-          title="Falcon Internal Preview"
+          src={"https://www.hraniumin.com"}
+          title="Hranium Infotech Internal Preview"
           className="w-full h-full min-h-[420px] bg-white"
           style={{ border: "none", borderRadius: 0 }}
           loading="lazy"

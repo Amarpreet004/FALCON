@@ -11,16 +11,16 @@ export default function GraphicDesignSection() {
     <>
       {/* SEO Optimized Metadata */}
       <Head>
-        <title>Graphic Design Services | Falcon Web Solution</title>
+        <title>Graphic Design Services | Hranium Infotech</title>
         <meta
           name="description"
-          content="Falcon Web Solution offers professional graphic design, UI/UX, branding, and digital marketing services. We create designs that elevate your brand and drive engagement."
+          content="Hranium Infotech offers professional graphic design, UI/UX, branding, and digital marketing services. We create designs that elevate your brand and drive engagement."
         />
         <meta
           name="keywords"
-          content="Graphic Design, Branding, UI/UX Design, Falcon Web Solution, Logo Design, Digital Marketing, SEO Optimization, Social Media Graphics"
+          content="Graphic Design, Branding, UI/UX Design, Hranium Infotech, Logo Design, Digital Marketing, SEO Optimization, Social Media Graphics"
         />
-        <meta name="author" content="Falcon Web Solution" />
+        <meta name="author" content="Hranium Infotech" />
       </Head>
 
       {/* Main Section */}
@@ -59,7 +59,7 @@ export default function GraphicDesignSection() {
 
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto md:mx-0">
             Unlock the power of cutting-edge <strong>graphic design</strong> and
-            <strong> digital marketing</strong> with Falcon Web Solution. From
+            <strong> digital marketing</strong> with Hranium Infotech. From
             eye-catching logos and <strong>brand identity design</strong> to
             full-scale <strong>UI/UX</strong> and <strong>SEO campaigns</strong>,
             we help your business stand out in today’s competitive market.

@@ -32,14 +32,14 @@ export default function SeoMarketingPage() {
     <>
       {/* ✅ Use <Head> properly for SEO */}
       <Head>
-        <title>SEO & Digital Marketing | Falcon Web Solution</title>
+        <title>SEO & Digital Marketing | Hranium Infotech</title>
         <meta
           name="description"
-          content="Boost your online presence with Falcon Web Solution’s SEO and digital marketing services. Grow your business with proven strategies and expert support."
+          content="Boost your online presence with Hranium Infotech’s SEO and digital marketing services. Grow your business with proven strategies and expert support."
         />
         <meta
           name="keywords"
-          content="SEO services, Falcon Web Solution, digital marketing, PPC campaigns, content marketing, analytics, social media optimization"
+          content="SEO services, Hranium Infotech, digital marketing, PPC campaigns, content marketing, analytics, social media optimization"
         />
       </Head>
 

@@ -14,7 +14,7 @@ export default function SeoMarketingPage() {
           Ready to Dominate the Digital Space?
         </h2>
         <p className="text-gray-100 mb-8 text-lg">
-          Let Falcon Web Solution help you build a strong digital footprint with
+          Let Hranium Infotech help you build a strong digital footprint with
           proven marketing strategies that deliver real results.
         </p>
         <button

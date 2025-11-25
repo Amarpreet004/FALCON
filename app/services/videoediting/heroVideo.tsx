@@ -88,7 +88,7 @@ function VideoHeroSection() {
 
           {/* Description */}
           <p className="text-black text-lg mb-8 max-w-lg leading-relaxed">
-            At Falcon Web Solution, we create stunning and impactful videos that make your brand stand out and drive real results.
+            At Hranium Infotech, we create stunning and impactful videos that make your brand stand out and drive real results.
           </p>
 
           {/* CTA Buttons */}

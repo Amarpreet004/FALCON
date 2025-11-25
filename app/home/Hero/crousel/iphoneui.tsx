@@ -58,7 +58,7 @@ const IphoneFrame: React.FC = () => {
         {/* Internal rotating preview to avoid external stale layout */}
         <iframe
           src={"/preview/landing"}
-          title="Falcon Internal Preview"
+          title="Hranium Infotech Internal Preview"
           className="w-full h-full min-h-[420px] bg-white"
           style={{ border: "none", borderRadius: 0 }}
           loading="lazy"

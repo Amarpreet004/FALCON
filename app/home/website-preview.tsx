@@ -12,7 +12,7 @@ export default function WebsitePreview() {
         <div className="w-full max-w-3xl aspect-video rounded-[26px] border-8 border-[#5C0632] overflow-hidden shadow-2xl bg-white">
           <iframe
             src="https://www.falconwebsolution.com"
-            title="Falcon Web Solution"
+            title="Hranium Infotech"
             className="w-full h-full min-h-[600px]"
             style={{ border: "none" }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

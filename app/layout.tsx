@@ -5,6 +5,7 @@ import { NavbarDemo as Navbar } from "./_components/newNav/Navnew";
 import { MobileNavigation } from "./_components/mobilenav/mobailenav";
 import Footer from "./_components/footer";
 import ThemeProvider from "./_components/theme-provider";
+import Popup from "./popup/popup";
 import { Analytics } from '@vercel/analytics/next';
 
 
@@ -20,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FALCON Web Solution ",
-  description: "FALCON INDUSTRY provides top-quality professional services including web development, design, and digital solutions.",
+  title: "Hranium Infotech",
+  description: "Hranium Infotech provides top-quality professional services including web development, design, and digital solutions.",
 };
 
 export default function RootLayout({
@@ -45,6 +46,7 @@ export default function RootLayout({
         <MobileNavigation />
         <main>{children}</main>
         <Footer />
+        <Popup />
         {/* </GlobalCoolMode> */}
       </body>
     </html>

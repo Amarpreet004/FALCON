@@ -73,8 +73,8 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/LOGOFALCON.png" 
-                alt="Falcon Solutions New Logo" 
+                src="/hraniumlogo.png" 
+                alt="Hranium Infotech Logo" 
                 className="h-14 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
               />
             </div>
@@ -167,7 +167,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-white text-sm">
-              &copy; {new Date().getFullYear()} Falcon Web Solution InfoTech. All rights reserved.
+              &copy; {new Date().getFullYear()} Hranium Infotech. All rights reserved.
             </p>
           </div>
         </div>
